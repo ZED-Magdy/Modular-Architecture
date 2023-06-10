@@ -6,6 +6,12 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
+        environment:
+            - ASPNETCORE_URLS="https://+;http://+"
+            - ASPNETCORE_HTTPS_PORT=7000
+            - ASPNETCORE_Kestrel__Certificates__Default__Password="password"
+            - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/connectionpoint.pfx
+            - ASPNETCORE_ENVIRONMENT=Development
         ports:
         - "5000:80"
         - "7000:443"
