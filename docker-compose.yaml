@@ -1,17 +1,19 @@
 ﻿version: '3.4'
 
-
 services:
-#    connectionPoint.Gateway:
-#        image: connectionpoint.gateway
-#        build:
-#            context: .
-#            dockerfile: src/ConnectionPoint.Gateway/Dockerfile
-#        ports:
-#        - "5083:80"
-#        depends_on:
-#        - postgres
-#        - redis
+    connectionPoint.Gateway:
+        image: connectionpoint.gateway
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+        - "5000:80"
+        - "7000:443"
+        depends_on:
+        - postgres
+        - redis
+        networks:
+        - connectionPointNetwork
     postgres:
         image: postgres:15
         restart: always
@@ -23,13 +25,20 @@ services:
         - "5432:5432"
         volumes:
         - postgres:/var/lib/postgresql/data
+        networks:
+        - connectionPointNetwork
     redis:
         image: redis:alpine
         ports:
         - "6379:6379"
         volumes:
         - redis:/data
+        networks:
+        - connectionPointNetwork
     
 volumes:
     postgres:
     redis:
+networks:
+    connectionPointNetwork:
+        driver: bridge

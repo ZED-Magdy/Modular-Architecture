@@ -3,6 +3,6 @@
 public class CategoryDto
 {
     public Guid? Id { get; set; }
-    public string Name_ar { get; set; }
-    public string Name_en { get; set; }
+    public string? NameAr { get; set; }
+    public string? NameEn { get; set; }
 }

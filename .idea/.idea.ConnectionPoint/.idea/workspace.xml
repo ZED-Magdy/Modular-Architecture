@@ -44,7 +44,24 @@
     <projectFile profileName="IIS Express">src/WebApplication1/WebApplication1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="" />
+    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Application/Dtos/PaginatedResultDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Application/Dtos/PaginatedResultDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Domain/Entities/FullAuditedEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Domain/Entities/FullAuditedEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Infrastructure/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/CategoryDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/CategoryDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/ConnectionPoint.Inventory.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/ConnectionPoint.Inventory.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/Day.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/Day.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/ServiceProduct.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/ServiceProduct.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +93,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="SWEA" />
   </component>
   <component name="ProjectId" id="2Q25AD0cF07yKp2Nl18gkTD9QMh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -96,6 +113,10 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.ConnectionPoint.Gateway: https">
+    <configuration name="Publish ConnectionPoint to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/bin/Release/net7.0/publish" target_framework="net7.0" uuid_high="1726375855548614407" uuid_low="-6890896120658102190" />
+      <method v="2" />
+    </configuration>
     <configuration name="AuthService: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/ConnectionPoint.AuthService/ConnectionPoint.AuthService.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net7.0" />
@@ -715,6 +736,7 @@
       <item itemvalue=".NET Launch Settings Profile.WebApplication1: https" />
       <item itemvalue=".NET Launch Settings Profile.WebApplication1: IIS Express" />
       <item itemvalue="Docker.dev" />
+      <item itemvalue="Publish to folder.Publish ConnectionPoint to folder" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -742,7 +764,8 @@
       <workItem from="1686230396393" duration="5732000" />
       <workItem from="1686314725274" duration="6158000" />
       <workItem from="1686320953841" duration="15691000" />
-      <workItem from="1686344550703" duration="615000" />
+      <workItem from="1686344550703" duration="1895000" />
+      <workItem from="1686397125713" duration="7544000" />
     </task>
     <task id="LOCAL؜٠٠٠٠١" summary="Create Inventory domain">
       <created>1684545942931</created>
@@ -786,7 +809,13 @@
       <option name="presentableId" value="LOCAL؜٠٠٠٠٧" />
       <updated>1686343836724</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL؜٠٠٠٠٨" summary="first commit">
+      <created>1686345373084</created>
+      <option name="number" value="LOCAL؜٠٠٠٠٨" />
+      <option name="presentableId" value="LOCAL؜٠٠٠٠٨" />
+      <updated>1686345373084</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -843,6 +872,7 @@
     <MESSAGE value="Renaming Booking projects&#10;- Add tax calculation on items" />
     <MESSAGE value="Restructure the project into a modular ddd" />
     <MESSAGE value="Rename common to core" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename common to core" />
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>

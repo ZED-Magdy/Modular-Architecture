@@ -13,6 +13,7 @@ public static class DependencyInjection
     public static IServiceCollection AddModuleDatabaseContext<TDbContext>(this IServiceCollection services,
         IConfiguration configuration) where TDbContext : DbContext
     {
+        Console.WriteLine($"the configurations is {configuration.GetConnectionString("Default")}");
         services.AddDbContext<TDbContext>(o => 
             o.UseNpgsql(configuration.GetConnectionString("Default"), 
                 e => 

@@ -2,7 +2,7 @@
 
 public class FullAuditedEntity<TKey>
 {
-    public virtual TKey Id { get; set; }
+    public virtual TKey? Id { get; set; }
     public virtual DateTime CreatedOn { get; set; } = DateTime.UtcNow;
     public virtual Guid CreatedBy { get; set; } = Guid.Empty;
     public virtual DateTime? ModifiedOn { get; set; } = DateTime.UtcNow;
