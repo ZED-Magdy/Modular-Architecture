@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-#
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{38628ED8-2931-4824-AF3A-446962BCCE3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Gateway", "src\ConnectionPoint.Gateway\ConnectionPoint.Gateway.csproj", "{697A9EA2-E4AB-4173-A3BF-54CC6DB10B31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Gateway", "src\ConnectionPoint.Gateway\ConnectionPoint.Gateway.csproj", "{697A9EA2-E4AB-4173-A3BF-54CC6DB10B31}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4F95CFEC-DFA9-4F45-9224-15097A739166}"
 EndProject
@@ -21,17 +23,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Voucher", "Voucher", "{9630
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Accounting", "Accounting", "{5193023E-D02B-4547-9BDE-DAD8DD7700B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Inventory.Application", "src\Inventory\ConnectionPoint.Inventory.Application\ConnectionPoint.Inventory.Application.csproj", "{17F551B1-A2C9-4707-A05E-9E7CE00E7852}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Inventory.Application", "src\Inventory\ConnectionPoint.Inventory.Application\ConnectionPoint.Inventory.Application.csproj", "{17F551B1-A2C9-4707-A05E-9E7CE00E7852}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Inventory.Domain", "src\Inventory\ConnectionPoint.Inventory.Domain\ConnectionPoint.Inventory.Domain.csproj", "{41A30352-D68E-485C-A795-3A73F5657AAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Inventory.Domain", "src\Inventory\ConnectionPoint.Inventory.Domain\ConnectionPoint.Inventory.Domain.csproj", "{41A30352-D68E-485C-A795-3A73F5657AAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Inventory.Infrastructure", "src\Inventory\ConnectionPoint.Inventory.Infrastructure\ConnectionPoint.Inventory.Infrastructure.csproj", "{35B96869-7C07-45FA-8E43-CED182D1E564}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Inventory.Infrastructure", "src\Inventory\ConnectionPoint.Inventory.Infrastructure\ConnectionPoint.Inventory.Infrastructure.csproj", "{35B96869-7C07-45FA-8E43-CED182D1E564}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Core.Application", "src\Core\ConnectionPoint.Core.Application\ConnectionPoint.Core.Application.csproj", "{AC939DE4-84C9-45FA-B71E-B2C2698EAF5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Core.Application", "src\Core\ConnectionPoint.Core.Application\ConnectionPoint.Core.Application.csproj", "{AC939DE4-84C9-45FA-B71E-B2C2698EAF5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Core.Domain", "src\Core\ConnectionPoint.Core.Domain\ConnectionPoint.Core.Domain.csproj", "{791304E8-5AA5-4228-82A9-8B84F1397E2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Core.Domain", "src\Core\ConnectionPoint.Core.Domain\ConnectionPoint.Core.Domain.csproj", "{791304E8-5AA5-4228-82A9-8B84F1397E2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Core.Infrastructure", "src\Core\ConnectionPoint.Core.Infrastructure\ConnectionPoint.Core.Infrastructure.csproj", "{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Core.Infrastructure", "src\Core\ConnectionPoint.Core.Infrastructure\ConnectionPoint.Core.Infrastructure.csproj", "{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Taxing.Application", "ConnectionPoint.Taxing.Application\ConnectionPoint.Taxing.Application.csproj", "{F9FB44D4-6988-4D6F-9A9A-C23E7D9A506E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Taxing.Domain", "ConnectionPoint.Taxing.Domain\ConnectionPoint.Taxing.Domain.csproj", "{6769663C-330E-4CEC-BBE8-6E76928781E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Taxing.Infrastructure", "ConnectionPoint.Taxing.Infrastructure\ConnectionPoint.Taxing.Infrastructure.csproj", "{45407C6E-5762-456B-BE56-6E0CE8F27AC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +75,21 @@ Global
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9FB44D4-6988-4D6F-9A9A-C23E7D9A506E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9FB44D4-6988-4D6F-9A9A-C23E7D9A506E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9FB44D4-6988-4D6F-9A9A-C23E7D9A506E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9FB44D4-6988-4D6F-9A9A-C23E7D9A506E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6769663C-330E-4CEC-BBE8-6E76928781E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6769663C-330E-4CEC-BBE8-6E76928781E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6769663C-330E-4CEC-BBE8-6E76928781E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6769663C-330E-4CEC-BBE8-6E76928781E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45407C6E-5762-456B-BE56-6E0CE8F27AC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45407C6E-5762-456B-BE56-6E0CE8F27AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45407C6E-5762-456B-BE56-6E0CE8F27AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45407C6E-5762-456B-BE56-6E0CE8F27AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{697A9EA2-E4AB-4173-A3BF-54CC6DB10B31} = {38628ED8-2931-4824-AF3A-446962BCCE3B}
@@ -84,5 +107,11 @@ Global
 		{AC939DE4-84C9-45FA-B71E-B2C2698EAF5B} = {4F95CFEC-DFA9-4F45-9224-15097A739166}
 		{791304E8-5AA5-4228-82A9-8B84F1397E2A} = {4F95CFEC-DFA9-4F45-9224-15097A739166}
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B} = {4F95CFEC-DFA9-4F45-9224-15097A739166}
+		{F9FB44D4-6988-4D6F-9A9A-C23E7D9A506E} = {42CA4740-BC8F-4140-86C4-401C13300141}
+		{6769663C-330E-4CEC-BBE8-6E76928781E2} = {42CA4740-BC8F-4140-86C4-401C13300141}
+		{45407C6E-5762-456B-BE56-6E0CE8F27AC7} = {42CA4740-BC8F-4140-86C4-401C13300141}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84293F29-5BD0-4998-B260-D0E7E4F92CEE}
 	EndGlobalSection
 EndGlobal

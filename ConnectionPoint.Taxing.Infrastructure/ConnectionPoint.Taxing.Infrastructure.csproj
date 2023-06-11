@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConnectionPoint.Taxing.Domain\ConnectionPoint.Taxing.Domain.csproj" />
+    <ProjectReference Include="..\src\Core\ConnectionPoint.Core.Domain\ConnectionPoint.Core.Domain.csproj" />
+    <ProjectReference Include="..\src\Core\ConnectionPoint.Core.Infrastructure\ConnectionPoint.Core.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
