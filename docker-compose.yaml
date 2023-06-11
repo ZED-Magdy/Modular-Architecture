@@ -7,19 +7,21 @@ services:
             context: .
             dockerfile: Dockerfile
         environment:
-            - ASPNETCORE_URLS="https://+;http://+"
-            - ASPNETCORE_HTTPS_PORT=7000
-            - ASPNETCORE_Kestrel__Certificates__Default__Password="password"
+            - ASPNETCORE_URLS=https://+;http://+
+            - ASPNETCORE_HTTPS_PORT=443
+            - ASPNETCORE_Kestrel__Certificates__Default__Password=password
             - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/connectionpoint.pfx
             - ASPNETCORE_ENVIRONMENT=Development
         ports:
-        - "5000:80"
-        - "7000:443"
+            - "5000:80"
+            - "7000:443"
         depends_on:
-        - postgres
-        - redis
+            - postgres
+            - redis
         networks:
-        - connectionPointNetwork
+            - connectionPointNetwork
+        volumes:
+            - ${HOME}/.aspnet/https:/https
     postgres:
         image: postgres:15
         restart: always
@@ -28,20 +30,20 @@ services:
             POSTGRES_USER: postgres
             POSTGRES_DB: connectionPoint
         ports:
-        - "5432:5432"
+            - "5432:5432"
         volumes:
-        - postgres:/var/lib/postgresql/data
+            - postgres:/var/lib/postgresql/data
         networks:
-        - connectionPointNetwork
+            - connectionPointNetwork
     redis:
         image: redis:alpine
         ports:
-        - "6379:6379"
+            - "6380:6379"
         volumes:
-        - redis:/data
+            - redis:/data
         networks:
-        - connectionPointNetwork
-    
+            - connectionPointNetwork
+
 volumes:
     postgres:
     redis:
