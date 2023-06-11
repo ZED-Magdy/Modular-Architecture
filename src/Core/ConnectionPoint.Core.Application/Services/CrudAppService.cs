@@ -24,7 +24,7 @@ public abstract class CrudAppService<TEntity, TKey, TDto> : ICrudAppService<TKey
         var totalCount = await _repository.CountAsync(x => x.Id != Guid.Empty, cancellationToken);
         var dtos = _mapper.Map<List<TEntity>, List<TDto>>(entities);
         var totalPages = (int)Math.Ceiling((double)totalCount / input.PerPage);
-        return new PaginatedResultDto<TDto>(input.Page++, input.PerPage,totalCount, totalPages, dtos);
+        return new PaginatedResultDto<TDto>(input.Page, input.PerPage,totalCount, totalPages, dtos);
     }
     
     public virtual async Task<TDto?> CreateAsync(TDto input, CancellationToken cancellationToken = default)
@@ -82,7 +82,7 @@ public abstract class CrudAppService<TEntity, TKey, TDto, TCreateDto,
         var totalCount = await _repository.CountAsync(x => x.Id != Guid.Empty, cancellationToken);
         var dtos = _mapper.Map<List<TEntity>, List<TDto>>(entities);
         var totalPages = (int)Math.Ceiling((double)totalCount / input.PerPage);
-        return new PaginatedResultDto<TDto>(input.PerPage++, input.PerPage,totalCount, totalPages, dtos);
+        return new PaginatedResultDto<TDto>(input.Page, input.PerPage,totalCount, totalPages, dtos);
     }
 
     public virtual async Task<TDto?> CreateAsync(TCreateDto input, CancellationToken cancellationToken = default)

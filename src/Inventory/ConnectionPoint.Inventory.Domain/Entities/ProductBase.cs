@@ -14,7 +14,7 @@ public abstract class ProductBase : FullAuditedEntity
     // (GrossPrice - Discount) - Taxes
     public decimal NetPrice { get; set; }
     [Column(TypeName = "jsonb")]
-    public IList<Guid> TaxesIds { get; set; } = new List<Guid>();
+    public IList<Guid>? TaxesIds { get; set; } = null;
     public decimal? Discount { get; set; }
     public decimal? DiscountPrice { get; set; }
     public DiscountType DiscountType { get; set; }
