@@ -20,7 +20,7 @@ public static class DependencyInjection
                     e.MigrationsAssembly(typeof(TDbContext).Assembly.FullName)));
         using var scope = services.BuildServiceProvider().CreateScope();
         var dbContext = scope.ServiceProvider.GetRequiredService<TDbContext>();
-        dbContext.Database.Migrate();
+        // dbContext.Database.Migrate();
         return services;
     }
     public static void RegisterRepositories(this IServiceCollection services, Type moduleRepository, Assembly assembly)
