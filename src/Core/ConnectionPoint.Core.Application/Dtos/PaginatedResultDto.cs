@@ -6,9 +6,9 @@ public class PaginatedResultDto<TDto>
     public int PerPage { get; private set; }
     public int Total { get; private set; }
     public int TotalPages { get; private set; }
-    public List<TDto?> Data { get; private set; }
+    public List<TDto> Data { get; private set; }
     
-    public PaginatedResultDto(int page, int perPage, int total, int totalPages, List<TDto?> data)
+    public PaginatedResultDto(int page, int perPage, int total, int totalPages, List<TDto> data)
     {
         Page = page;
         PerPage = perPage;

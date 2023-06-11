@@ -34,25 +34,25 @@ public class InventoryDbContext : ModuleDbContext, IInventoryDbContext
         modelBuilder.Entity<Service>()
             .Property(s => s.EmployeesIds)
             .HasConversion(
-                v => string.Join(',', v),
+                v =>  v == null ? "" : string.Join(',', v),
                 v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(Guid.Parse).ToList());
         
         modelBuilder.Entity<Service>()
             .Property(s => s.TaxesIds)
             .HasConversion(
-                v => string.Join(',', v),
+                v =>  v == null ? "" : string.Join(',', v),
                 v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(Guid.Parse).ToList());
 
         modelBuilder.Entity<Product>()
             .Property(s => s.TaxesIds)
             .HasConversion(
-                v => string.Join(',', v),
+                v => v == null ? "" : string.Join(',', v),
                 v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(Guid.Parse).ToList());
         
         modelBuilder.Entity<Deal>()
             .Property(s => s.TaxesIds)
             .HasConversion(
-                v => string.Join(',', v),
+                v =>  v == null ? "" : string.Join(',', v),
                 v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(Guid.Parse).ToList());
     }
 }
