@@ -26,23 +26,23 @@ namespace ConnectionPoint.Taxing.Application.Services
         {
             predicate = (e) => input.TaxesIds.Contains(e.Id); 
             List<Tax> taxes = await taxRepository.GetListAsync(predicate);
-            Taxable taxable = new Taxable(input.TaxableId, input.TaxableType, input.GrossPrice, taxes);
+            Taxable taxable = new Taxable();
+            taxable.Create(input.TaxableId, input.TaxableType, input.GrossPrice, taxes);
             var entity = await repository.CreateAsync(taxable, cancellationToken);
             TaxableDto result = mapper.Map<Taxable,TaxableDto>(entity); 
             return result;
         }
         public override async Task<TaxableDto?> UpdateAsync(Guid id, UpdateTaxableDto input, CancellationToken cancellationToken = default)
         {
-            var taxEntity = await repository.GetByIdAsync(id);
+            var taxEntity = await repository.GetByIdAsync(id); // ef track the element, when i call update method is that make another tracking ?
             if (taxEntity == null)
             {
                 return default;
             }
-            taxEntity = mapper.Map<UpdateTaxableDto, Taxable>(input);
             predicate = (e) => input.TaxesIds.Contains(e.Id);
             List<Tax> taxes = await taxRepository.GetListAsync(predicate);
-            Taxable taxable = new Taxable(input.TaxableId, input.TaxableType, input.GrossPrice, taxes);
-            var entity = await repository.UpdateAsync(taxable, cancellationToken);
+            taxEntity.Create(input.TaxableId, input.TaxableType, input.GrossPrice, taxes);
+            var entity = await repository.UpdateAsync(taxEntity, cancellationToken);
             TaxableDto result = mapper.Map<Taxable, TaxableDto>(entity);
             return result;
         }

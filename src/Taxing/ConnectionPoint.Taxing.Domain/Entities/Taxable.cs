@@ -10,8 +10,8 @@ namespace ConnectionPoint.Taxing.Domain.Entities
         public decimal GrossPrice { get; set; }
         public decimal NetPrice { get; set; }
         public IList<Tax> Taxes { get; set; } = new List<Tax>();
-        private Taxable() { }
-        public Taxable(Guid taxableId, string taxableType, decimal Price, IList<Tax> taxes)
+        public Taxable() { }
+        public void Create(Guid taxableId, string taxableType, decimal Price, IList<Tax> taxes)
         {
             TaxableId = taxableId;
             TaxableType = taxableType;
