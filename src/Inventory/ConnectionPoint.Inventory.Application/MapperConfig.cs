@@ -18,8 +18,12 @@ public class MapperConfig : Profile
 
         #region Product
             CreateMap<Product, ProductDto>();
-            CreateMap<CreateProductDto, Product>();
-            CreateMap<UpdateProductDto, Product>();
+            CreateMap<CreateProductDto, Product>()
+                .ForMember(p => p.Categories, o => o.Ignore())
+                .ForMember(p => p.TaxesIds, o => o.Ignore());
+            CreateMap<UpdateProductDto, Product>()
+                .ForMember(p => p.Categories, o => o.Ignore())
+                .ForMember(p => p.TaxesIds, o => o.Ignore());
         #endregion
         
     }

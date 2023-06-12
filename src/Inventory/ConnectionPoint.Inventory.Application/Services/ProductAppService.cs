@@ -14,15 +14,19 @@ namespace ConnectionPoint.Inventory.Application.Services;
 public class ProductAppService : CrudAppService<Product, Guid, ProductDto, CreateProductDto, UpdateProductDto>, IProductAppService
 {
     private readonly ITaxableAppService _taxableService;
+    private readonly IRepository<Category> _categoryAppService;
 
-    public ProductAppService(IRepository<Product> repository, IMapper mapper, ITaxableAppService taxableService) : base(repository, mapper)
+    public ProductAppService(IRepository<Product> repository, IMapper mapper, ITaxableAppService taxableService, IRepository<Category> categoryAppService) : base(repository, mapper)
     {
         _taxableService = taxableService;
+        _categoryAppService = categoryAppService;
     }
 
     public override async Task<ProductDto?> CreateAsync(CreateProductDto input, CancellationToken cancellationToken = default)
     {
         var product = _mapper.Map<Product>(input);
+        var categories = await _categoryAppService.GetListAsync(c => input.CategoriesIds.Contains(c.Id), cancellationToken);
+        product.Categories = categories;
         //TODO: Calculate discount price
         await _repository.CreateAsync(product, cancellationToken);
         // Create taxable
@@ -47,6 +51,8 @@ public class ProductAppService : CrudAppService<Product, Guid, ProductDto, Creat
             return default;
         }
         product = _mapper.Map(input, product);
+        var categories = await _categoryAppService.GetListAsync(c => input.CategoriesIds.Contains(c.Id), cancellationToken);
+        product.Categories = categories;
         //TODO: Calculate discount price
         product = await _repository.UpdateAsync(product, cancellationToken);
         await _taxableService.UpdateAsync(product.Id, new UpdateTaxableDto

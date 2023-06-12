@@ -44,18 +44,10 @@
     <projectFile profileName="IIS Express">src/WebApplication1/WebApplication1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="change CreateProductDto.cs">
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/ProductAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/ProductAttributeValue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/ProductVariation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/Variation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/20230612041612_AddProductVariations.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/20230612041612_AddProductVariations.cs" afterDir="false" />
+    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="Add taxes to ProductAppService.cs">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/InventoryDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/InventoryDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Persistence/EFCore/IInventoryDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Persistence/EFCore/IInventoryDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Persistence/EFCore/InventoryDBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Persistence/EFCore/InventoryDBContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/MapperConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/MapperConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ProductAppService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ProductAppService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -823,7 +815,13 @@
       <option name="presentableId" value="LOCAL؜٠٠٠٠٩" />
       <updated>1686435807659</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL؜٠٠٠١٠" summary="Add taxes to ProductAppService.cs">
+      <created>1686602219703</created>
+      <option name="number" value="LOCAL؜٠٠٠١٠" />
+      <option name="presentableId" value="LOCAL؜٠٠٠١٠" />
+      <updated>1686602219703</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -883,6 +881,7 @@
     <MESSAGE value="Rename common to core" />
     <MESSAGE value="first commit" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="Add taxes to ProductAppService.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add taxes to ProductAppService.cs" />
   </component>
 </project>
