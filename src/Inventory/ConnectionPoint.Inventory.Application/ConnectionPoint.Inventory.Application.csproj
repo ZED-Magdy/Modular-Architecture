@@ -9,6 +9,7 @@
     <ItemGroup>
       <ProjectReference Include="..\..\Core\ConnectionPoint.Core.Application\ConnectionPoint.Core.Application.csproj" />
       <ProjectReference Include="..\..\Core\ConnectionPoint.Core.Domain\ConnectionPoint.Core.Domain.csproj" />
+      <ProjectReference Include="..\..\Taxing\ConnectionPoint.Taxing.Application\ConnectionPoint.Taxing.Application.csproj" />
       <ProjectReference Include="..\ConnectionPoint.Inventory.Domain\ConnectionPoint.Inventory.Domain.csproj" />
       <ProjectReference Include="..\ConnectionPoint.Inventory.Infrastructure\ConnectionPoint.Inventory.Infrastructure.csproj" />
     </ItemGroup>

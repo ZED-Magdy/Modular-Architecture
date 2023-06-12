@@ -32,12 +32,17 @@ namespace ConnectionPoint.Taxing.Application.Services
             TaxableDto result = mapper.Map<Taxable,TaxableDto>(entity); 
             return result;
         }
-        public override async Task<TaxableDto?> UpdateAsync(Guid id, UpdateTaxableDto input, CancellationToken cancellationToken = default)
+        public override async Task<TaxableDto?> UpdateAsync(Guid taxableId, UpdateTaxableDto input, CancellationToken cancellationToken = default)
         {
-            var taxEntity = await repository.GetByIdAsync(id); // ef track the element, when i call update method is that make another tracking ?
+            var taxEntity = await repository.GetAsync(t => t.TaxableId == taxableId && t.TaxableType == input.TaxableType, cancellationToken);
             if (taxEntity == null)
             {
                 return default;
+            }
+
+            if (input.TaxesIds.Count <= 0)
+            {
+                await _repository.DeleteAsync(taxEntity, cancellationToken);
             }
             predicate = (e) => input.TaxesIds.Contains(e.Id);
             List<Tax> taxes = await taxRepository.GetListAsync(predicate);
