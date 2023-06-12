@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\ConnectionPoint.Core.Application\ConnectionPoint.Core.Application.csproj" />
+    <ProjectReference Include="..\ConnectionPoint.Voucher.Domain\ConnectionPoint.Voucher.Domain.csproj" />
+    <ProjectReference Include="..\ConnectionPoint.Voucher.Infrastructure\ConnectionPoint.Voucher.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -15,7 +15,6 @@ namespace ConnectionPoint.Taxing.Application.Services
         private readonly IRepository<Taxable> repository;
         private readonly IMapper mapper;
         private readonly IRepository<Tax> taxRepository;
-        public Expression<Func<Tax, bool>> predicate;
         public TaxableAppService(IRepository<Taxable> repository,IMapper mapper,IRepository<Tax> taxRepository):base (repository,mapper)
         {
             this.repository = repository;
@@ -24,7 +23,7 @@ namespace ConnectionPoint.Taxing.Application.Services
         }
         public override async Task<TaxableDto?> CreateAsync(CreateTaxableDto input, CancellationToken cancellationToken = default)
         {
-            predicate = (e) => input.TaxesIds.Contains(e.Id); 
+            Expression<Func<Tax, bool>> predicate = (e) => input.TaxesIds.Contains(e.Id); 
             List<Tax> taxes = await taxRepository.GetListAsync(predicate);
             Taxable taxable = new Taxable();
             taxable.Create(input.TaxableId, input.TaxableType, input.GrossPrice, taxes);
@@ -44,7 +43,7 @@ namespace ConnectionPoint.Taxing.Application.Services
             {
                 await _repository.DeleteAsync(taxEntity, cancellationToken);
             }
-            predicate = (e) => input.TaxesIds.Contains(e.Id);
+            Expression<Func<Tax, bool>> predicate = (e) => input.TaxesIds.Contains(e.Id);
             List<Tax> taxes = await taxRepository.GetListAsync(predicate);
             taxEntity.Create(input.TaxableId, input.TaxableType, input.GrossPrice, taxes);
             var entity = await repository.UpdateAsync(taxEntity, cancellationToken);
