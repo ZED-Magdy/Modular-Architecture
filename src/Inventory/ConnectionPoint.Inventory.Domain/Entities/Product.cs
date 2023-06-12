@@ -35,7 +35,6 @@ public class Product : ProductBase
 
             Variations.Add(variation);
         }
-
         return this;
     }
 }
