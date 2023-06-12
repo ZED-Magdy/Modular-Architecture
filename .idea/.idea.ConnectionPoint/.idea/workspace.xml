@@ -45,33 +45,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Controllers/ProductsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Application/Dtos/FullAuditedDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Category/CategoryDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Category/CreateCategoryDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Category/UpdateCategoryDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Product/CreateProductDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Product/ProductDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Product/UpdateProductDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductBaseDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/Contracts/IProductAppService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ProductAppService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/20230610235853_FixTaxIds.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/20230610235853_FixTaxIds.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/ConnectionPoint.Voucher.Application.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/Dtos/Coupon/CouponDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/Dtos/Coupon/CreateCouponDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/Dtos/Coupon/UpdateCouponDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/Dtos/Enums/CouponDiscountTypeDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/MapperConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/Services/Contracts/ICouponAppService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/Services/CouponAppService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/VoucherApplicationModule.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Domain/ConnectionPoint.Voucher.Domain.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Domain/Entities/Coupon.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Domain/Entities/Enums/CouponDiscountType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Domain/VoucherDomainModule.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Infrastructure/ConnectionPoint.Voucher.Infrastructure.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Infrastructure/Persistence/EFCore/IVoucherDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Infrastructure/Persistence/EFCore/VoucherDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Infrastructure/Persistence/EFCore/VoucherRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Infrastructure/VoucherInfrastructureModule.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Controllers/ApiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Controllers/CategoriesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConnectionPoint.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ConnectionPoint.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/ConnectionPoint.Gateway.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/ConnectionPoint.Gateway.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Application/Services/CrudAppService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Application/Services/CrudAppService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Infrastructure/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/CategoryDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/InventoryApplicationModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/InventoryApplicationModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/MapperConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/MapperConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/CategoryAppService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/CategoryAppService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/Contracts/ICategoryAppService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/Contracts/ICategoryAppService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/ProductBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/ProductBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/InventoryDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/InventoryDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Persistence/EFCore/InventoryDBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Persistence/EFCore/InventoryDBContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,26 +74,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="staging" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d382df578ec93391918cfaa4ce7f4b8f35c9aed1241d6556dc9be26df13c/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e74356f198b598e97eaeea83e8b7b1f2bfe27c0a39fedf86bb7dc44827fbda/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ConnectionPoint.Gateway/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4dc731a2825b3b282c3a7fc5adbea47e8720eadf5445558010f8488ec05eb64f/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8512b3f592a227cfb48f8fff0c16a356dcbfbb5399342d8febc7b7116bff64/IdentityRoleClaim.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce719136c12653cd464ae0b247771f618b92f8beec14c1010b5278a7d0fd1f/DbContextServices.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Github/ConnectionPoint/ConnectionPoint/src/ConnectionPoint.Gateway/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fa6ffbdad146e0f31ac2292ddf3ab30fa4c35b55932c2fc73ee6209dc7e5/NpgsqlMoneyTypeMapping.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cd8acfd6340199d4186f76c46704be72adc5846271f6a7a3989216e18d82e/IdentityServerApplicationBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3819a9b6d7712d903bcdec7ed2ae6a7eeb809ec174c15bbf3720d839fb35ce9d/IdentityUserClaim.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/56f822634992d269d967d6ff62ba539be8e6a3e41663bba2454d4a2b1139e3/ModelSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3e7a5d9e8f1e8fc8895e3999e4b986ebd69c6f311e8a7f7ba94f4560a54a89/IdentityDbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ProductAppService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b005387896e445e9934cc0d7c4c3e87f30880/0/KeyAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c2c76f76c4c99a8c6db55b1934da998bcd24e7561ec068c48c92e497271b8/ICurrentDbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Github/ConnectionPoint/ConnectionPoint/src/ConnectionPoint.Gateway/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/816dbaba8a29ece3dd3dc326642858d27d2d19142f9a2109bb04617985ec9/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8aeca8dfcec95a81b42a28e5c138e1c321e89def3fed605511172a8beaec/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d382df578ec93391918cfaa4ce7f4b8f35c9aed1241d6556dc9be26df13c/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e74356f198b598e97eaeea83e8b7b1f2bfe27c0a39fedf86bb7dc44827fbda/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce719136c12653cd464ae0b247771f618b92f8beec14c1010b5278a7d0fd1f/DbContextServices.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/56f822634992d269d967d6ff62ba539be8e6a3e41663bba2454d4a2b1139e3/ModelSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/aacc74311ca994f12b71cddb22241be9d6654c65e94f5985c5488dee396916f/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c263c8fb9cfe96923e1b47bd1ec8258f85c4219772d976133ab516ceb1859ec/ModelCustomizer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4393b886a286b7656c92b4aee5d9759858ee3ca3f858a1b518be26bea0c7/String.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b005387896e445e9934cc0d7c4c3e87f30880/0/KeyAttribute.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c2c76f76c4c99a8c6db55b1934da998bcd24e7561ec068c48c92e497271b8/ICurrentDbContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/816dbaba8a29ece3dd3dc326642858d27d2d19142f9a2109bb04617985ec9/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8aeca8dfcec95a81b42a28e5c138e1c321e89def3fed605511172a8beaec/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/MapperConfig.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

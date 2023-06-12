@@ -33,6 +33,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Core.Domain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Core.Infrastructure", "src\Core\ConnectionPoint.Core.Infrastructure\ConnectionPoint.Core.Infrastructure.csproj", "{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Voucher.Application", "src\Voucher\ConnectionPoint.Voucher.Application\ConnectionPoint.Voucher.Application.csproj", "{52928989-2D6B-4CC0-8B65-5720A7A64340}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Voucher.Domain", "src\Voucher\ConnectionPoint.Voucher.Domain\ConnectionPoint.Voucher.Domain.csproj", "{569C83D5-DBB1-471A-84DA-1C9BE37D84CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Voucher.Infrastructure", "src\Voucher\ConnectionPoint.Voucher.Infrastructure\ConnectionPoint.Voucher.Infrastructure.csproj", "{DCA03443-1104-45B8-992F-88B6F5CFF376}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +73,18 @@ Global
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52928989-2D6B-4CC0-8B65-5720A7A64340}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52928989-2D6B-4CC0-8B65-5720A7A64340}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52928989-2D6B-4CC0-8B65-5720A7A64340}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52928989-2D6B-4CC0-8B65-5720A7A64340}.Release|Any CPU.Build.0 = Release|Any CPU
+		{569C83D5-DBB1-471A-84DA-1C9BE37D84CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{569C83D5-DBB1-471A-84DA-1C9BE37D84CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{569C83D5-DBB1-471A-84DA-1C9BE37D84CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{569C83D5-DBB1-471A-84DA-1C9BE37D84CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCA03443-1104-45B8-992F-88B6F5CFF376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA03443-1104-45B8-992F-88B6F5CFF376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA03443-1104-45B8-992F-88B6F5CFF376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCA03443-1104-45B8-992F-88B6F5CFF376}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{697A9EA2-E4AB-4173-A3BF-54CC6DB10B31} = {38628ED8-2931-4824-AF3A-446962BCCE3B}
@@ -84,5 +102,8 @@ Global
 		{AC939DE4-84C9-45FA-B71E-B2C2698EAF5B} = {4F95CFEC-DFA9-4F45-9224-15097A739166}
 		{791304E8-5AA5-4228-82A9-8B84F1397E2A} = {4F95CFEC-DFA9-4F45-9224-15097A739166}
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B} = {4F95CFEC-DFA9-4F45-9224-15097A739166}
+		{52928989-2D6B-4CC0-8B65-5720A7A64340} = {96300E04-A69E-4183-A43C-0F3734B8BB57}
+		{569C83D5-DBB1-471A-84DA-1C9BE37D84CF} = {96300E04-A69E-4183-A43C-0F3734B8BB57}
+		{DCA03443-1104-45B8-992F-88B6F5CFF376} = {96300E04-A69E-4183-A43C-0F3734B8BB57}
 	EndGlobalSection
 EndGlobal
