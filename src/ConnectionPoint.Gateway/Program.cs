@@ -1,6 +1,7 @@
 using ConnectionPoint.Core.Application;
 using ConnectionPoint.Inventory.Application;
 using ConnectionPoint.Voucher.Application;
+using ConnectionPoint.Taxing.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,8 @@ builder.Services.AddControllers();
 builder.Services
     .AddACommonServices(builder.Configuration)
     .AddAInventoryModule(builder.Configuration)
-    .AddAVoucherModule(builder.Configuration);
+    .AddAVoucherModule(builder.Configuration)
+    .AddATaxingModule(builder.Configuration);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -269,9 +269,6 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                     b.Property<Guid?>("ParentProduct")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("ProductId")
-                        .HasColumnType("uuid");
-
                     b.Property<int>("ProductType")
                         .HasColumnType("integer");
 
@@ -282,9 +279,84 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
 
                     b.HasIndex("DealId");
 
-                    b.HasIndex("ProductId");
-
                     b.ToTable("Products", "inventory");
+                });
+
+            modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.ProductAttribute", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid>("CreatedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("DeletedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("ModifiedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductAttributes", "inventory");
+                });
+
+            modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.ProductAttributeValue", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid>("CreatedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("DeletedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("ModifiedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("ProductAttributeId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductAttributeId");
+
+                    b.ToTable("ProductAttributeValue", "inventory");
                 });
 
             modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.ProductUnitQuantity", b =>
@@ -302,7 +374,44 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
 
                     b.HasIndex("UnitId");
 
-                    b.ToTable("ProductUnitQuantity", "inventory");
+                    b.ToTable("ProductUnitQuantities", "inventory");
+                });
+
+            modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.ProductVariation", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid>("CreatedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("DeletedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("ModifiedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductVariations", "inventory");
                 });
 
             modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.Service", b =>
@@ -464,6 +573,53 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                     b.ToTable("Units", "inventory");
                 });
 
+            modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.Variation", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid>("AttributeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("CreatedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("DeletedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("ModifiedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("ProductVariationId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ValueId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AttributeId");
+
+                    b.HasIndex("ProductVariationId");
+
+                    b.HasIndex("ValueId");
+
+                    b.ToTable("Variations", "inventory");
+                });
+
             modelBuilder.Entity("CategoryProduct", b =>
                 {
                     b.HasOne("ConnectionPoint.Inventory.Domain.Entities.Category", null)
@@ -515,10 +671,17 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                     b.HasOne("ConnectionPoint.Inventory.Domain.Entities.Deal", null)
                         .WithMany("Products")
                         .HasForeignKey("DealId");
+                });
 
-                    b.HasOne("ConnectionPoint.Inventory.Domain.Entities.Product", null)
-                        .WithMany("Variants")
-                        .HasForeignKey("ProductId");
+            modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.ProductAttributeValue", b =>
+                {
+                    b.HasOne("ConnectionPoint.Inventory.Domain.Entities.ProductAttribute", "ProductAttribute")
+                        .WithMany()
+                        .HasForeignKey("ProductAttributeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ProductAttribute");
                 });
 
             modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.ProductUnitQuantity", b =>
@@ -534,6 +697,17 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                         .HasForeignKey("UnitId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.ProductVariation", b =>
+                {
+                    b.HasOne("ConnectionPoint.Inventory.Domain.Entities.Product", "Product")
+                        .WithMany("Variations")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.Service", b =>
@@ -562,6 +736,33 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                     b.Navigation("Service");
                 });
 
+            modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.Variation", b =>
+                {
+                    b.HasOne("ConnectionPoint.Inventory.Domain.Entities.ProductAttribute", "Attribute")
+                        .WithMany("Variations")
+                        .HasForeignKey("AttributeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ConnectionPoint.Inventory.Domain.Entities.ProductVariation", "ProductVariation")
+                        .WithMany("Variations")
+                        .HasForeignKey("ProductVariationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ConnectionPoint.Inventory.Domain.Entities.ProductAttributeValue", "Value")
+                        .WithMany("Variations")
+                        .HasForeignKey("ValueId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Attribute");
+
+                    b.Navigation("ProductVariation");
+
+                    b.Navigation("Value");
+                });
+
             modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.Deal", b =>
                 {
                     b.Navigation("Deals");
@@ -575,7 +776,22 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                 {
                     b.Navigation("ProductUnitQuantities");
 
-                    b.Navigation("Variants");
+                    b.Navigation("Variations");
+                });
+
+            modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.ProductAttribute", b =>
+                {
+                    b.Navigation("Variations");
+                });
+
+            modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.ProductAttributeValue", b =>
+                {
+                    b.Navigation("Variations");
+                });
+
+            modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.ProductVariation", b =>
+                {
+                    b.Navigation("Variations");
                 });
 
             modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.Service", b =>
