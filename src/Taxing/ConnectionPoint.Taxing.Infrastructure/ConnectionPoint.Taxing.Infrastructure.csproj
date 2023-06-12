@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\ConnectionPoint.Core.Domain\ConnectionPoint.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\Core\ConnectionPoint.Core.Infrastructure\ConnectionPoint.Core.Infrastructure.csproj" />
+    <ProjectReference Include="..\ConnectionPoint.Taxing.Domain\ConnectionPoint.Taxing.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
