@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\source\repos\Con-point\src\Core\ConnectionPoint.Core.Domain\ConnectionPoint.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\Core\ConnectionPoint.Core.Application\ConnectionPoint.Core.Application.csproj" />
   </ItemGroup>
 
 </Project>

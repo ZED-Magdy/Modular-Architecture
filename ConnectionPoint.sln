@@ -35,11 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Core.Infras
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Voucher", "Voucher", "{21BF0946-FCA4-449A-AA8F-FFD0F3A37BCD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Voucher.Application", "..\..\..\Desktop\New folder\ConnectionPoint.Voucher.Application\ConnectionPoint.Voucher.Application.csproj", "{64B4311F-D74F-4833-86A2-4D70EDBD6086}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Voucher.Application", "src\Voucher\ConnectionPoint.Voucher.Application\ConnectionPoint.Voucher.Application.csproj", "{1817AA22-482B-4362-B12F-CB23B9288317}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Voucher.Domain", "..\..\..\Desktop\New folder\ConnectionPoint.Voucher.Domain\ConnectionPoint.Voucher.Domain.csproj", "{A32096D7-7C41-401A-8DB8-F86A131E88CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Voucher.Domain", "src\Voucher\ConnectionPoint.Voucher.Domain\ConnectionPoint.Voucher.Domain.csproj", "{EC624EA2-C332-41D7-B962-623ED782D0B9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Voucher.Infrastructure", "..\..\..\Desktop\New folder\ConnectionPoint.Voucher.Infrastructure\ConnectionPoint.Voucher.Infrastructure.csproj", "{878313C1-0E8F-427D-B901-7BE778973433}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Voucher.Infrastructure", "src\Voucher\ConnectionPoint.Voucher.Infrastructure\ConnectionPoint.Voucher.Infrastructure.csproj", "{83B747F4-F524-4B79-AEA6-8B48CBADAD4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,18 +75,18 @@ Global
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{64B4311F-D74F-4833-86A2-4D70EDBD6086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64B4311F-D74F-4833-86A2-4D70EDBD6086}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64B4311F-D74F-4833-86A2-4D70EDBD6086}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64B4311F-D74F-4833-86A2-4D70EDBD6086}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A32096D7-7C41-401A-8DB8-F86A131E88CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A32096D7-7C41-401A-8DB8-F86A131E88CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A32096D7-7C41-401A-8DB8-F86A131E88CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A32096D7-7C41-401A-8DB8-F86A131E88CC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{878313C1-0E8F-427D-B901-7BE778973433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{878313C1-0E8F-427D-B901-7BE778973433}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{878313C1-0E8F-427D-B901-7BE778973433}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{878313C1-0E8F-427D-B901-7BE778973433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1817AA22-482B-4362-B12F-CB23B9288317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1817AA22-482B-4362-B12F-CB23B9288317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1817AA22-482B-4362-B12F-CB23B9288317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1817AA22-482B-4362-B12F-CB23B9288317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC624EA2-C332-41D7-B962-623ED782D0B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC624EA2-C332-41D7-B962-623ED782D0B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC624EA2-C332-41D7-B962-623ED782D0B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC624EA2-C332-41D7-B962-623ED782D0B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83B747F4-F524-4B79-AEA6-8B48CBADAD4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83B747F4-F524-4B79-AEA6-8B48CBADAD4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83B747F4-F524-4B79-AEA6-8B48CBADAD4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83B747F4-F524-4B79-AEA6-8B48CBADAD4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -107,9 +107,9 @@ Global
 		{791304E8-5AA5-4228-82A9-8B84F1397E2A} = {4F95CFEC-DFA9-4F45-9224-15097A739166}
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B} = {4F95CFEC-DFA9-4F45-9224-15097A739166}
 		{21BF0946-FCA4-449A-AA8F-FFD0F3A37BCD} = {38628ED8-2931-4824-AF3A-446962BCCE3B}
-		{64B4311F-D74F-4833-86A2-4D70EDBD6086} = {21BF0946-FCA4-449A-AA8F-FFD0F3A37BCD}
-		{A32096D7-7C41-401A-8DB8-F86A131E88CC} = {21BF0946-FCA4-449A-AA8F-FFD0F3A37BCD}
-		{878313C1-0E8F-427D-B901-7BE778973433} = {21BF0946-FCA4-449A-AA8F-FFD0F3A37BCD}
+		{1817AA22-482B-4362-B12F-CB23B9288317} = {21BF0946-FCA4-449A-AA8F-FFD0F3A37BCD}
+		{EC624EA2-C332-41D7-B962-623ED782D0B9} = {21BF0946-FCA4-449A-AA8F-FFD0F3A37BCD}
+		{83B747F4-F524-4B79-AEA6-8B48CBADAD4A} = {21BF0946-FCA4-449A-AA8F-FFD0F3A37BCD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C07D300-2060-45BD-AD39-9083FA0E0ACC}
