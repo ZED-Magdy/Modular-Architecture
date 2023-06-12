@@ -16,9 +16,11 @@ public class InventoryDbContext : ModuleDbContext, IInventoryDbContext
     public DbSet<Service>? Services { get; set; }
     public DbSet<Category>? Categories { get; set; }
     public DbSet<Unit>? Units { get; set; }
+    public DbSet<ProductUnitQuantity>? ProductUnitQuantities { get; set; }
+    public DbSet<ProductVariation>? ProductVariations { get; set; }
+    public DbSet<Variation>? Variations { get; set; }
+    public DbSet<ProductAttribute>? ProductAttributes { get; set; }
 
-
-    
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -54,5 +56,37 @@ public class InventoryDbContext : ModuleDbContext, IInventoryDbContext
             .HasConversion(
                 v =>  v == null ? "" : string.Join(',', v),
                 v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(Guid.Parse).ToList());
+        
+        modelBuilder.Entity<ProductVariation>()
+            .HasKey(pv => pv.Id);
+
+        modelBuilder.Entity<ProductVariation>()
+            .HasOne(pv => pv.Product)
+            .WithMany(p => p.Variations)
+            .HasForeignKey(pv => pv.ProductId);
+
+        modelBuilder.Entity<Variation>()
+            .HasKey(v => v.Id);
+
+        modelBuilder.Entity<Variation>()
+            .HasOne(v => v.ProductVariation)
+            .WithMany(pv => pv.Variations)
+            .HasForeignKey(v => v.ProductVariationId);
+
+        modelBuilder.Entity<ProductAttribute>()
+            .HasKey(pa => pa.Id);
+
+        modelBuilder.Entity<ProductAttribute>()
+            .HasMany(pa => pa.Variations)
+            .WithOne(v => v.Attribute)
+            .HasForeignKey(v => v.AttributeId);
+
+        modelBuilder.Entity<ProductAttributeValue>()
+            .HasKey(pav => pav.Id);
+
+        modelBuilder.Entity<ProductAttributeValue>()
+            .HasMany(pav => pav.Variations)
+            .WithOne(v => v.Value)
+            .HasForeignKey(v => v.ValueId);
     }
 }
