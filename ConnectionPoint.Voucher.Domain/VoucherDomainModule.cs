@@ -2,7 +2,7 @@
 
 namespace ConnectionPoint.Voucher.Domain
 {
-    public static class VouchersDomainModule
+    public static class VoucherDomainModule
     {
         public static IServiceCollection AddDomainDomain(this IServiceCollection services)
         {

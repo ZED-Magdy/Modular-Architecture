@@ -1,6 +1,6 @@
 ﻿namespace ConnectionPoint.Voucher.Domain.Entities.Enums
 {
-    public enum DiscountType
+    public enum CouponDiscountType
     {
         Percentage,
         Amount

@@ -8,7 +8,7 @@ namespace ConnectionPoint.Voucher.Domain.Entities
         public string Code { get; set; }
         public Guid? CustomerId { get; set; }
         public decimal Discount { get; set; }
-        public DiscountType DiscountType { get; set; } = DiscountType.Percentage;
+        public CouponDiscountType DiscountType { get; set; } = CouponDiscountType.Percentage;
         public DateTime? ExpirationDate { get; set; }
         public int UseLimit { get; set; } = 1;
     }

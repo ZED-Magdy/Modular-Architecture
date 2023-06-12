@@ -35,11 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Core.Infras
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Voucher", "Voucher", "{2322675F-F74E-4439-B01E-41CBE3D379DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Voucher.Domain", "ConnectionPoint.Voucher.Domain\ConnectionPoint.Voucher.Domain.csproj", "{A6C7F28C-BCC3-434E-9291-EAB97F67D947}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Voucher.Application", "..\..\..\Desktop\New folder\ConnectionPoint.Voucher.Application\ConnectionPoint.Voucher.Application.csproj", "{6181C875-B595-4E90-87D0-5DBCF6344E1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Voucher.Application", "ConnectionPoint.Voucher.Application\ConnectionPoint.Voucher.Application.csproj", "{28B09C1D-7856-419A-8BA0-F8F0BBF75C4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Voucher.Domain", "..\..\..\Desktop\New folder\ConnectionPoint.Voucher.Domain\ConnectionPoint.Voucher.Domain.csproj", "{E118EED3-F137-4092-A72B-5371E4D0C325}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Voucher.Infrastructure", "ConnectionPoint.Voucher.Infrastructure\ConnectionPoint.Voucher.Infrastructure.csproj", "{E9A0204C-F58D-405D-A0E1-86066E6ED5BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Voucher.Infrastructure", "..\..\..\Desktop\New folder\ConnectionPoint.Voucher.Infrastructure\ConnectionPoint.Voucher.Infrastructure.csproj", "{2011CC71-74FD-42E7-A1D0-4D38A6518BC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,18 +75,18 @@ Global
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A6C7F28C-BCC3-434E-9291-EAB97F67D947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6C7F28C-BCC3-434E-9291-EAB97F67D947}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6C7F28C-BCC3-434E-9291-EAB97F67D947}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6C7F28C-BCC3-434E-9291-EAB97F67D947}.Release|Any CPU.Build.0 = Release|Any CPU
-		{28B09C1D-7856-419A-8BA0-F8F0BBF75C4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28B09C1D-7856-419A-8BA0-F8F0BBF75C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28B09C1D-7856-419A-8BA0-F8F0BBF75C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28B09C1D-7856-419A-8BA0-F8F0BBF75C4D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E9A0204C-F58D-405D-A0E1-86066E6ED5BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9A0204C-F58D-405D-A0E1-86066E6ED5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9A0204C-F58D-405D-A0E1-86066E6ED5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9A0204C-F58D-405D-A0E1-86066E6ED5BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6181C875-B595-4E90-87D0-5DBCF6344E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6181C875-B595-4E90-87D0-5DBCF6344E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6181C875-B595-4E90-87D0-5DBCF6344E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6181C875-B595-4E90-87D0-5DBCF6344E1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E118EED3-F137-4092-A72B-5371E4D0C325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E118EED3-F137-4092-A72B-5371E4D0C325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E118EED3-F137-4092-A72B-5371E4D0C325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E118EED3-F137-4092-A72B-5371E4D0C325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2011CC71-74FD-42E7-A1D0-4D38A6518BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2011CC71-74FD-42E7-A1D0-4D38A6518BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2011CC71-74FD-42E7-A1D0-4D38A6518BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2011CC71-74FD-42E7-A1D0-4D38A6518BC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -107,9 +107,9 @@ Global
 		{791304E8-5AA5-4228-82A9-8B84F1397E2A} = {4F95CFEC-DFA9-4F45-9224-15097A739166}
 		{CEC4D2B4-D3DF-4DC5-890D-93305D46D27B} = {4F95CFEC-DFA9-4F45-9224-15097A739166}
 		{2322675F-F74E-4439-B01E-41CBE3D379DF} = {38628ED8-2931-4824-AF3A-446962BCCE3B}
-		{A6C7F28C-BCC3-434E-9291-EAB97F67D947} = {2322675F-F74E-4439-B01E-41CBE3D379DF}
-		{28B09C1D-7856-419A-8BA0-F8F0BBF75C4D} = {2322675F-F74E-4439-B01E-41CBE3D379DF}
-		{E9A0204C-F58D-405D-A0E1-86066E6ED5BE} = {2322675F-F74E-4439-B01E-41CBE3D379DF}
+		{6181C875-B595-4E90-87D0-5DBCF6344E1B} = {2322675F-F74E-4439-B01E-41CBE3D379DF}
+		{E118EED3-F137-4092-A72B-5371E4D0C325} = {2322675F-F74E-4439-B01E-41CBE3D379DF}
+		{2011CC71-74FD-42E7-A1D0-4D38A6518BC0} = {2322675F-F74E-4439-B01E-41CBE3D379DF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C07D300-2060-45BD-AD39-9083FA0E0ACC}
