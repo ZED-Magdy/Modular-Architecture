@@ -1,16 +1,18 @@
-﻿using AutoMapper;
+﻿using System.Linq.Expressions;
+using AutoMapper;
 using AutoMapper.Internal.Mappers;
 using ConnectionPoint.Core.Domain.Entities;
 using ConnectionPoint.Core.Domain.Repositories;
 using ConnectionPoint.Core.Application.Dtos;
+using Microsoft.EntityFrameworkCore;
 
 namespace ConnectionPoint.Core.Application.Services;
 
 public abstract class CrudAppService<TEntity, TKey, TDto> : ICrudAppService<TKey, TDto>
     where TEntity : FullAuditedEntity
 {
-    private readonly IRepository<TEntity> _repository;
-    private readonly IMapper _mapper;
+    protected readonly IRepository<TEntity> _repository;
+    protected readonly IMapper _mapper;
 
     public CrudAppService(IRepository<TEntity> repository, IMapper mapper)
     {
@@ -20,7 +22,17 @@ public abstract class CrudAppService<TEntity, TKey, TDto> : ICrudAppService<TKey
     public virtual async Task<PaginatedResultDto<TDto>> GetListAsync(PaginationRequestDto input, CancellationToken cancellationToken = default)
     {
         var skipCount = (input.Page - 1)  * input.PerPage;
-        var entities = await _repository.GetListAsync(x => x.Id != Guid.Empty, skipCount, input.PerPage, cancellationToken);
+        List<TEntity> entities;
+        if (!string.IsNullOrEmpty(input.Search))
+        {
+            entities = await _repository.GetListAsync(
+                GetFilterExpression(input.Search), skipCount, input.PerPage, cancellationToken);
+        }
+        else
+        {
+            entities = await _repository.GetListAsync(skipCount, input.PerPage, cancellationToken);
+        }
+        
         var totalCount = await _repository.CountAsync(x => x.Id != Guid.Empty, cancellationToken);
         var dtos = _mapper.Map<List<TEntity>, List<TDto>>(entities);
         var totalPages = (int)Math.Ceiling((double)totalCount / input.PerPage);
@@ -60,14 +72,19 @@ public abstract class CrudAppService<TEntity, TKey, TDto> : ICrudAppService<TKey
         }
         return _mapper.Map<TEntity, TDto>(entity);
     }
+
+    protected virtual Expression<Func<TEntity, bool>> GetFilterExpression(string search)
+    {
+        return (x) => EF.Functions.Like(x.Id.ToString(), $"%{search}%");
+    }
 }
 
 public abstract class CrudAppService<TEntity, TKey, TDto, TCreateDto,
     TUpdateDto> : ICrudAppService<TKey, TDto, TCreateDto,
     TUpdateDto> where TEntity : FullAuditedEntity
 {
-    private readonly IRepository<TEntity> _repository;
-    private readonly IMapper _mapper;
+    protected readonly IRepository<TEntity> _repository;
+    protected readonly IMapper _mapper;
 
     public CrudAppService(IRepository<TEntity> repository, IMapper mapper)
     {
@@ -78,12 +95,23 @@ public abstract class CrudAppService<TEntity, TKey, TDto, TCreateDto,
     public virtual async Task<PaginatedResultDto<TDto>> GetListAsync(PaginationRequestDto input, CancellationToken cancellationToken = default)
     {
         var skipCount = (input.Page - 1)  * input.PerPage;
-        var entities = await _repository.GetListAsync(x => x.Id != Guid.Empty, skipCount, input.PerPage, cancellationToken);
+        List<TEntity> entities;
+        if (!string.IsNullOrEmpty(input.Search))
+        {
+            entities = await _repository.GetListAsync(
+                GetFilterExpression(input.Search), skipCount, input.PerPage, cancellationToken);
+        }
+        else
+        {
+            entities = await _repository.GetListAsync(skipCount, input.PerPage, cancellationToken);
+        }
+        
         var totalCount = await _repository.CountAsync(x => x.Id != Guid.Empty, cancellationToken);
         var dtos = _mapper.Map<List<TEntity>, List<TDto>>(entities);
         var totalPages = (int)Math.Ceiling((double)totalCount / input.PerPage);
         return new PaginatedResultDto<TDto>(input.Page, input.PerPage,totalCount, totalPages, dtos);
     }
+
 
     public virtual async Task<TDto?> CreateAsync(TCreateDto input, CancellationToken cancellationToken = default)
     {
@@ -118,6 +146,9 @@ public abstract class CrudAppService<TEntity, TKey, TDto, TCreateDto,
         }
         return _mapper.Map<TEntity, TDto>(entity);
     }
-    
+    protected virtual Expression<Func<TEntity, bool>> GetFilterExpression(string search)
+    {
+        return (x) => EF.Functions.Like(x.Id.ToString(), $"%{search}%");
+    }
 
 }

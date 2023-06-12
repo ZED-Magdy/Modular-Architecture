@@ -10,10 +10,10 @@ public class CreateProductDto
     public string DescriptionEn { get; set; } = string.Empty;
     public decimal GrossPrice { get; set; }
     // (GrossPrice - Discount) - Taxes
-    public decimal NetPrice { get; set; }
-    // public IList<Guid> TaxesIds { get; set; } = new List<Guid>();
+    // public decimal NetPrice { get; set; }
+    public IList<Guid> TaxesIds { get; set; } = new List<Guid>();
     public decimal? Discount { get; set; }
-    public decimal? DiscountPrice { get; set; }
+    // public decimal? DiscountPrice { get; set; }
     public DiscountTypeDto DiscountType { get; set; }
     public bool AvailableOnShop { get; set; } = false;
     public string Barcode { get; set; } = string.Empty;
