@@ -9,5 +9,6 @@ namespace ConnectionPoint.Taxing.Application.DTOs.Taxable
         public decimal GrossPrice { get; set; }
         public decimal NetPrice { get; set; }
         public IList<TaxDto> Taxes { get; set; } = new List<TaxDto>();
+        public IList<Guid> TaxesIds { get; set; } = new List<Guid>();
     }
 }
