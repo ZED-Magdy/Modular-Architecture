@@ -6,4 +6,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConnectionPoint.Voucher.Domain\ConnectionPoint.Voucher.Domain.csproj" />
+    <ProjectReference Include="..\ConnectionPoint.Voucher.Infrastructure\ConnectionPoint.Voucher.Infrastructure.csproj" />
+    <ProjectReference Include="..\src\Core\ConnectionPoint.Core.Application\ConnectionPoint.Core.Application.csproj" />
+    <ProjectReference Include="..\src\Core\ConnectionPoint.Core.Domain\ConnectionPoint.Core.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

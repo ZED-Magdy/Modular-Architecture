@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConnectionPoint.Voucher.Domain\ConnectionPoint.Voucher.Domain.csproj" />
+    <ProjectReference Include="..\src\Core\ConnectionPoint.Core.Domain\ConnectionPoint.Core.Domain.csproj" />
+    <ProjectReference Include="..\src\Core\ConnectionPoint.Core.Infrastructure\ConnectionPoint.Core.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
