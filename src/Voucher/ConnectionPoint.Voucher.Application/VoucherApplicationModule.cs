@@ -12,6 +12,7 @@ namespace ConnectionPoint.Voucher.Application
         {
             services.AddVoucherInfrastructure(configuration);
             services.AddScoped(typeof(ICouponAppService), typeof(CouponAppService));
+            services.AddScoped(typeof(IDiscountableAppService), typeof(DiscountableAppService));
             services.AddAutoMapper(typeof(VoucherApplicationModule).Assembly);
             return services;
         }
