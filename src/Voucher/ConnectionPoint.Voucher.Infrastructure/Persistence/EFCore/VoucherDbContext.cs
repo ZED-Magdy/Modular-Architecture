@@ -12,6 +12,7 @@ namespace ConnectionPoint.Voucher.Infrastructure.Persistence.EFCore
                 
         }
         public DbSet<Coupon>? Coupons { get;set; }
+        public DbSet<Discountable>? Discountables { get;set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
