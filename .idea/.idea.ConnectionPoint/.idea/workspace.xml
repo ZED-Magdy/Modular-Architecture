@@ -44,9 +44,10 @@
     <projectFile profileName="IIS Express">src/WebApplication1/WebApplication1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="Fix #20">
+    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Controllers/ServicesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Controllers/ServicesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Application/Services/CrudAppService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Application/Services/CrudAppService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/MapperConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/MapperConfig.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +73,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d382df578ec93391918cfaa4ce7f4b8f35c9aed1241d6556dc9be26df13c/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e74356f198b598e97eaeea83e8b7b1f2bfe27c0a39fedf86bb7dc44827fbda/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Github/ConnectionPoint/ConnectionPoint/src/Taxing/ConnectionPoint.Taxing.Application/Services/TaxableAppService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fecab28d64cfa2425c8a7329b1158ab5e0d087ed15ae9302e9c3a9e165c350/Queryable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4dc731a2825b3b282c3a7fc5adbea47e8720eadf5445558010f8488ec05eb64f/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ServiceAppService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8512b3f592a227cfb48f8fff0c16a356dcbfbb5399342d8febc7b7116bff64/IdentityRoleClaim.cs" root0="SKIP_HIGHLIGHTING" />
@@ -84,7 +85,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3e7a5d9e8f1e8fc8895e3999e4b986ebd69c6f311e8a7f7ba94f4560a54a89/IdentityDbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/aacc74311ca994f12b71cddb22241be9d6654c65e94f5985c5488dee396916f/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c263c8fb9cfe96923e1b47bd1ec8258f85c4219772d976133ab516ceb1859ec/ModelCustomizer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Github/ConnectionPoint/ConnectionPoint/src/Taxing/ConnectionPoint.Taxing.Application/Services/TaxableAppService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/MapperConfig.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4393b886a286b7656c92b4aee5d9759858ee3ca3f858a1b518be26bea0c7/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b005387896e445e9934cc0d7c4c3e87f30880/0/KeyAttribute.cs" root0="SKIP_HIGHLIGHTING" />
@@ -771,6 +771,7 @@
       <workItem from="1686397125713" duration="7544000" />
       <workItem from="1686436995135" duration="467000" />
       <workItem from="1686437783367" duration="4416000" />
+      <workItem from="1686691230559" duration="680000" />
     </task>
     <task id="LOCAL؜٠٠٠٠١" summary="Create Inventory domain">
       <created>1684545942931</created>
@@ -850,7 +851,13 @@
       <option name="presentableId" value="LOCAL؜٠٠٠١٣" />
       <updated>1686616201867</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL؜٠٠٠١٤" summary="fix get service list controller">
+      <created>1686616777855</created>
+      <option name="number" value="LOCAL؜٠٠٠١٤" />
+      <option name="presentableId" value="LOCAL؜٠٠٠١٤" />
+      <updated>1686616777855</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -914,6 +921,7 @@
     <MESSAGE value="fix docker" />
     <MESSAGE value="fix Dockerfile" />
     <MESSAGE value="Fix #20" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix #20" />
+    <MESSAGE value="fix get service list controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix get service list controller" />
   </component>
 </project>

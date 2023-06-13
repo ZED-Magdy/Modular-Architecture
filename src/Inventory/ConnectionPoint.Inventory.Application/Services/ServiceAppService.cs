@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using AutoMapper;
 using ConnectionPoint.Core.Application.Services;
 using ConnectionPoint.Core.Domain.Repositories;
@@ -6,6 +7,7 @@ using ConnectionPoint.Inventory.Application.Services.Contracts;
 using ConnectionPoint.Inventory.Domain.Entities;
 using ConnectionPoint.Taxing.Application.DTOs.Taxable;
 using ConnectionPoint.Taxing.Application.Services.Contracts;
+using Microsoft.EntityFrameworkCore;
 
 namespace ConnectionPoint.Inventory.Application.Services;
 
@@ -65,5 +67,24 @@ public class ServiceAppService : CrudAppService<Service, Guid, ServiceDto, Creat
             TaxesIds = input.TaxesIds
         }, cancellationToken);
         return _mapper.Map<ServiceDto>(service);
+    }
+    
+    protected override Expression<Func<Service, bool>> GetFilterExpression(string search)
+    {
+        return (p) =>
+            EF.Functions.Like(p.NameAr, $"%{search}%")
+            || EF.Functions.Like(p.NameEn, $"%{search}%");
+    }
+    protected override Expression<Func<Service, object>> GetSortingFilter(string? inputSortBy)
+    {
+        return inputSortBy switch
+        {
+            "nameAr" => c => c.NameAr,
+            "nameEn" => c => c.NameEn,
+            "grossPrice" => c => c.GrossPrice,
+            "netPrice" => c => c.NetPrice,
+            "status" => c => c.Active,
+            _ => c => c.CreatedOn
+        };
     }
 }

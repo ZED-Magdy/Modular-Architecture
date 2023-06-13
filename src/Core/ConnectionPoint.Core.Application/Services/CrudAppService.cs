@@ -26,11 +26,13 @@ public abstract class CrudAppService<TEntity, TKey, TDto> : ICrudAppService<TKey
         if (!string.IsNullOrEmpty(input.Search))
         {
             entities = await _repository.GetListAsync(
-                GetFilterExpression(input.Search), skipCount, input.PerPage, cancellationToken);
+                GetFilterExpression(input.Search), skipCount, input.PerPage,
+                GetSortingFilter(input.SortBy),
+                input.SortDirection == "desc", cancellationToken);
         }
         else
         {
-            entities = await _repository.GetListAsync(skipCount, input.PerPage, cancellationToken);
+            entities = await _repository.GetListAsync(skipCount, input.PerPage, GetSortingFilter(input.SortBy),input.SortDirection == "desc", cancellationToken);
         }
         
         var totalCount = await _repository.CountAsync(x => x.Id != Guid.Empty, cancellationToken);
@@ -77,6 +79,10 @@ public abstract class CrudAppService<TEntity, TKey, TDto> : ICrudAppService<TKey
     {
         return (x) => EF.Functions.Like(x.Id.ToString(), $"%{search}%");
     }
+    protected virtual Expression<Func<TEntity, object>> GetSortingFilter(string? inputSortBy)
+    {
+        return x => x.CreatedOn;
+    }
 }
 
 public abstract class CrudAppService<TEntity, TKey, TDto, TCreateDto,
@@ -99,11 +105,13 @@ public abstract class CrudAppService<TEntity, TKey, TDto, TCreateDto,
         if (!string.IsNullOrEmpty(input.Search))
         {
             entities = await _repository.GetListAsync(
-                GetFilterExpression(input.Search), skipCount, input.PerPage, cancellationToken);
+                GetFilterExpression(input.Search), skipCount, input.PerPage,
+                GetSortingFilter(input.SortBy),
+                input.SortDirection == "desc", cancellationToken);
         }
         else
         {
-            entities = await _repository.GetListAsync(skipCount, input.PerPage, cancellationToken);
+            entities = await _repository.GetListAsync(skipCount, input.PerPage, GetSortingFilter(input.SortBy),input.SortDirection == "desc", cancellationToken);
         }
         
         var totalCount = await _repository.CountAsync(x => x.Id != Guid.Empty, cancellationToken);
@@ -111,8 +119,6 @@ public abstract class CrudAppService<TEntity, TKey, TDto, TCreateDto,
         var totalPages = (int)Math.Ceiling((double)totalCount / input.PerPage);
         return new PaginatedResultDto<TDto>(input.Page, input.PerPage,totalCount, totalPages, dtos);
     }
-
-
     public virtual async Task<TDto?> CreateAsync(TCreateDto input, CancellationToken cancellationToken = default)
     {
         var entity = _mapper.Map<TCreateDto, TEntity>(input);
@@ -149,6 +155,10 @@ public abstract class CrudAppService<TEntity, TKey, TDto, TCreateDto,
     protected virtual Expression<Func<TEntity, bool>> GetFilterExpression(string search)
     {
         return (x) => EF.Functions.Like(x.Id.ToString(), $"%{search}%");
+    }
+    protected virtual Expression<Func<TEntity, object>> GetSortingFilter(string? inputSortBy)
+    {
+        return x => x.CreatedOn;
     }
 
 }

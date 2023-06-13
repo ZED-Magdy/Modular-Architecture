@@ -19,23 +19,16 @@ public class MapperConfig : Profile
 
         #region Product
             CreateMap<Product, ProductDto>();
-            CreateMap<CreateProductDto, Product>()
-                .ForMember(p => p.Categories, o => o.Ignore())
-                .ForMember(p => p.TaxesIds, o => o.Ignore());
-            CreateMap<UpdateProductDto, Product>()
-                .ForMember(p => p.Categories, o => o.Ignore())
-                .ForMember(p => p.TaxesIds, o => o.Ignore());
+            CreateMap<CreateProductDto, Product>();
+                CreateMap<UpdateProductDto, Product>();
         #endregion
         
         #region Service
             CreateMap<Service, ServiceDto>();
-            CreateMap<CreateServiceDto, Service>()
-                .ForMember(p => p.Categories, o => o.Ignore())
-                .ForMember(p => p.TaxesIds, o => o.Ignore());
-            CreateMap<UpdateServiceDto, Service>()
-                .ForMember(p => p.Categories, o => o.Ignore())
-                .ForMember(p => p.TaxesIds, o => o.Ignore());
+            CreateMap<CreateServiceDto, Service>();
+            CreateMap<UpdateServiceDto, Service>();
+
             #endregion
-        
+
     }
 }

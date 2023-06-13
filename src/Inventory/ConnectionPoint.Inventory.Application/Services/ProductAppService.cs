@@ -73,4 +73,17 @@ public class ProductAppService : CrudAppService<Product, Guid, ProductDto, Creat
             || EF.Functions.Like(p.NameEn, $"%{search}%")
             || EF.Functions.Like(p.Barcode, $"%{search}%");
     }
+    protected override Expression<Func<Product, object>> GetSortingFilter(string? inputSortBy)
+    {
+        return inputSortBy switch
+        {
+            "nameAr" => c => c.NameAr,
+            "nameEn" => c => c.NameEn,
+            "barcode" => c => c.Barcode,
+            "grossPrice" => c => c.GrossPrice,
+            "netPrice" => c => c.NetPrice,
+            "status" => c => c.Active,
+            _ => c => c.CreatedOn
+        };
+    }
 }
