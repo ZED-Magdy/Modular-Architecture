@@ -6,7 +6,7 @@ namespace ConnectionPoint.Voucher.Application.Dtos.Discountable
     public class DiscountableDto : FullAuditedDto
     {
         public Guid DiscountableId { get; set; }
-        public string TDiscountableType { get; set; }
+        public string DiscountableType { get; set; }
         public double NetPrice { get; set; }
         public List<CouponDto> Coupons { get; set; } = new List<CouponDto>();
     }
