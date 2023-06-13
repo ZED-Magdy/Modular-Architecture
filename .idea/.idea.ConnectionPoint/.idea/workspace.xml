@@ -44,8 +44,11 @@
     <projectFile profileName="IIS Express">src/WebApplication1/WebApplication1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/InventoryApplicationModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/InventoryApplicationModule.cs" afterDir="false" />
+    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="add services controller">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,17 +76,18 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e74356f198b598e97eaeea83e8b7b1f2bfe27c0a39fedf86bb7dc44827fbda/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Github/ConnectionPoint/ConnectionPoint/src/Taxing/ConnectionPoint.Taxing.Application/Services/TaxableAppService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4dc731a2825b3b282c3a7fc5adbea47e8720eadf5445558010f8488ec05eb64f/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ServiceAppService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8512b3f592a227cfb48f8fff0c16a356dcbfbb5399342d8febc7b7116bff64/IdentityRoleClaim.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce719136c12653cd464ae0b247771f618b92f8beec14c1010b5278a7d0fd1f/DbContextServices.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fa6ffbdad146e0f31ac2292ddf3ab30fa4c35b55932c2fc73ee6209dc7e5/NpgsqlMoneyTypeMapping.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cd8acfd6340199d4186f76c46704be72adc5846271f6a7a3989216e18d82e/IdentityServerApplicationBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ServiceAppService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3819a9b6d7712d903bcdec7ed2ae6a7eeb809ec174c15bbf3720d839fb35ce9d/IdentityUserClaim.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/56f822634992d269d967d6ff62ba539be8e6a3e41663bba2454d4a2b1139e3/ModelSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3e7a5d9e8f1e8fc8895e3999e4b986ebd69c6f311e8a7f7ba94f4560a54a89/IdentityDbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/aacc74311ca994f12b71cddb22241be9d6654c65e94f5985c5488dee396916f/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c263c8fb9cfe96923e1b47bd1ec8258f85c4219772d976133ab516ceb1859ec/ModelCustomizer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Github/ConnectionPoint/ConnectionPoint/src/Taxing/ConnectionPoint.Taxing.Application/Services/TaxableAppService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/MapperConfig.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4393b886a286b7656c92b4aee5d9759858ee3ca3f858a1b518be26bea0c7/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b005387896e445e9934cc0d7c4c3e87f30880/0/KeyAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c2c76f76c4c99a8c6db55b1934da998bcd24e7561ec068c48c92e497271b8/ICurrentDbContext.cs" root0="SKIP_HIGHLIGHTING" />
