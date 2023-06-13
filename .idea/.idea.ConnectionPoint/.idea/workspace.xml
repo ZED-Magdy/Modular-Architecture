@@ -44,11 +44,11 @@
     <projectFile profileName="IIS Express">src/WebApplication1/WebApplication1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="fix docker">
+    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="fix Dockerfile">
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Infrastructure/Migrations/20230613002908_InitVoucher.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Infrastructure/Migrations/20230613002908_InitVoucher.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Infrastructure/Migrations/VoucherDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ServiceAppService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ServiceAppService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -840,7 +840,13 @@
       <option name="presentableId" value="LOCAL؜٠٠٠١١" />
       <updated>1686614705344</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL؜٠٠٠١٢" summary="fix Dockerfile">
+      <created>1686615356924</created>
+      <option name="number" value="LOCAL؜٠٠٠١٢" />
+      <option name="presentableId" value="LOCAL؜٠٠٠١٢" />
+      <updated>1686615356924</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -902,6 +908,7 @@
     <MESSAGE value="commit" />
     <MESSAGE value="Add taxes to ProductAppService.cs" />
     <MESSAGE value="fix docker" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix docker" />
+    <MESSAGE value="fix Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix Dockerfile" />
   </component>
 </project>
