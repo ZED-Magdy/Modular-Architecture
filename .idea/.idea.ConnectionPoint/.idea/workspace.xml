@@ -44,11 +44,11 @@
     <projectFile profileName="IIS Express">src/WebApplication1/WebApplication1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="add services controller">
+    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="fix docker">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ServiceAppService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ServiceAppService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -834,7 +834,13 @@
       <option name="presentableId" value="LOCAL؜٠٠٠١٠" />
       <updated>1686602219703</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL؜٠٠٠١١" summary="fix docker">
+      <created>1686614705344</created>
+      <option name="number" value="LOCAL؜٠٠٠١١" />
+      <option name="presentableId" value="LOCAL؜٠٠٠١١" />
+      <updated>1686614705344</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -895,6 +901,7 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="commit" />
     <MESSAGE value="Add taxes to ProductAppService.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add taxes to ProductAppService.cs" />
+    <MESSAGE value="fix docker" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix docker" />
   </component>
 </project>

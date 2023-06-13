@@ -1,7 +1,6 @@
 using AutoMapper;
 using ConnectionPoint.Core.Application.Services;
 using ConnectionPoint.Core.Domain.Repositories;
-using ConnectionPoint.Inventory.Application.Dtos.Product;
 using ConnectionPoint.Inventory.Application.Dtos.Service;
 using ConnectionPoint.Inventory.Application.Services.Contracts;
 using ConnectionPoint.Inventory.Domain.Entities;

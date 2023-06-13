@@ -20,6 +20,7 @@ COPY src/Taxing/ConnectionPoint.Taxing.Infrastructure/ConnectionPoint.Taxing.Inf
 COPY src/Voucher/ConnectionPoint.Voucher.Application/ConnectionPoint.Voucher.Application.csproj ./Voucher/ConnectionPoint.Voucher.Application/
 COPY src/Voucher/ConnectionPoint.Voucher.Domain/ConnectionPoint.Voucher.Domain.csproj ./Voucher/ConnectionPoint.Voucher.Domain/
 COPY src/Voucher/ConnectionPoint.Voucher.Infrastructure/ConnectionPoint.Voucher.Infrastructure.csproj ./Voucher/ConnectionPoint.Voucher.Infrastructure/
+
 #COPY src/ConnectionPoint.Gateway/NuGet.Config ./ConnectionPoint.Gateway/   # If you have a custom NuGet.Config file
 
 WORKDIR /app/ConnectionPoint.Gateway
@@ -29,6 +30,9 @@ RUN dotnet restore
 COPY src/ConnectionPoint.Gateway/. ./ 
 COPY src/Core/. ../Core/
 COPY src/Inventory/. ../Inventory/
+COPY src/Taxing/. ../Taxing/
+COPY src/Voucher/. ../Voucher/
+
 RUN dotnet publish -c Release -o out
 
 # Runtime stage
