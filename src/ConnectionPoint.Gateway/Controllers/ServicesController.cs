@@ -16,7 +16,7 @@ public class ServicesController : ControllerBase
     }
     
     [HttpGet]
-    public async Task<ActionResult<PaginatedResultDto<ServiceDto>>> Get(PaginationRequestDto paginationRequestDto, CancellationToken cancellationToken)
+    public async Task<ActionResult<PaginatedResultDto<ServiceDto>>> Get([FromQuery]PaginationRequestDto paginationRequestDto, CancellationToken cancellationToken)
     {
         return await _serviceAppService.GetListAsync(paginationRequestDto, cancellationToken);
     }
