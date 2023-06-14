@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace ConnectionPoint.Core.Infrastructure.Persistence;
 
-public abstract class EFCoreRepository<TEntity> : IRepository<TEntity> where TEntity : FullAuditedEntity
+public abstract class EFCoreRepository<TEntity> : IRepository<TEntity> where TEntity : FullAuditedEntityDto
 {
     private readonly ModuleDbContext _dbContext;
 

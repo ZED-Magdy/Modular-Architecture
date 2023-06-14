@@ -2,7 +2,7 @@ using ConnectionPoint.Core.Domain.Entities;
 
 namespace ConnectionPoint.Inventory.Domain.Entities;
 
-public class Variation : FullAuditedEntity
+public class Variation : FullAuditedEntityDto
 {
     //example (XL, Red, etc.)
     public Guid ProductVariationId { get; set; }

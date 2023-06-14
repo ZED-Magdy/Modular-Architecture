@@ -33,7 +33,7 @@ public static class DependencyInjection
         }
 
         var entities = assembly.GetTypes()
-            .Where(t => t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof(FullAuditedEntity)));
+            .Where(t => t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof(FullAuditedEntityDto)));
         
         foreach (var entity in entities)
         {

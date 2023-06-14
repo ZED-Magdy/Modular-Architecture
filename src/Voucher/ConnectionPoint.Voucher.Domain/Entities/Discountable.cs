@@ -2,7 +2,7 @@
 
 namespace ConnectionPoint.Voucher.Domain.Entities
 {
-    public class Discountable : FullAuditedEntity
+    public class Discountable : FullAuditedEntityDto
     {
         public Guid DiscountableId { get; set; }
         public string DiscountableType { get; set; }

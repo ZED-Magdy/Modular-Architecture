@@ -2,7 +2,7 @@ using ConnectionPoint.Core.Domain.Entities;
 
 namespace ConnectionPoint.Inventory.Domain.Entities;
 
-public class ProductAttribute : FullAuditedEntity
+public class ProductAttribute : FullAuditedEntityDto
 {
     //example (Size, Color, etc.)
     public string Name { get; set; }

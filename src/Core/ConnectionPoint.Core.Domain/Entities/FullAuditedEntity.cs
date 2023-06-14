@@ -12,6 +12,6 @@ public class FullAuditedEntity<TKey>
     public virtual bool Active { get; set; } 
 }
 
-public class FullAuditedEntity : FullAuditedEntity<Guid>
+public class FullAuditedEntityDto : FullAuditedEntity<Guid>
 {
 }

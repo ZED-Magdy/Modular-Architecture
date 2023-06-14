@@ -4,7 +4,7 @@ using ConnectionPoint.Inventory.Domain.Entities.Enums;
 
 namespace ConnectionPoint.Inventory.Domain.Entities;
 
-public abstract class ProductBase : FullAuditedEntity
+public abstract class ProductBase : FullAuditedEntityDto
 {
     public string NameAr { get; set; } = string.Empty;
     public string NameEn { get; set; } = string.Empty;

@@ -3,7 +3,7 @@ using ConnectionPoint.Taxing.Domain.Entities.Enums;
 
 namespace ConnectionPoint.Taxing.Domain.Entities
 {
-    public class Taxable : FullAuditedEntity
+    public class Taxable : FullAuditedEntityDto
     {
         public Guid TaxableId { get; set; }
         public string TaxableType { get; set; }

@@ -3,7 +3,7 @@ using ConnectionPoint.Voucher.Domain.Entities.Enums;
 
 namespace ConnectionPoint.Voucher.Domain.Entities
 {
-    public class Coupon: FullAuditedEntity
+    public class Coupon: FullAuditedEntityDto
     {
         public string Code { get; set; }
         public Guid? CustomerId { get; set; }

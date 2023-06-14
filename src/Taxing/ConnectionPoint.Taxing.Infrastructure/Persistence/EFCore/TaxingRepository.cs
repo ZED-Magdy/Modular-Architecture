@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConnectionPoint.Taxing.Infrastructure.Persistence.EFCore
 {
-    public class TaxingRepository<TEntity> : EFCoreRepository<TEntity> where TEntity : FullAuditedEntity
+    public class TaxingRepository<TEntity> : EFCoreRepository<TEntity> where TEntity : FullAuditedEntityDto
     {
         public TaxingRepository(TaxingDbContext dbContext) : base (dbContext)
         {

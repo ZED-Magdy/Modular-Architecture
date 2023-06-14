@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace ConnectionPoint.Core.Application.Services;
 
 public abstract class CrudAppService<TEntity, TKey, TDto> : ICrudAppService<TKey, TDto>
-    where TEntity : FullAuditedEntity
+    where TEntity : FullAuditedEntityDto
 {
     protected readonly IRepository<TEntity> _repository;
     protected readonly IMapper _mapper;
@@ -87,7 +87,7 @@ public abstract class CrudAppService<TEntity, TKey, TDto> : ICrudAppService<TKey
 
 public abstract class CrudAppService<TEntity, TKey, TDto, TCreateDto,
     TUpdateDto> : ICrudAppService<TKey, TDto, TCreateDto,
-    TUpdateDto> where TEntity : FullAuditedEntity
+    TUpdateDto> where TEntity : FullAuditedEntityDto
 {
     protected readonly IRepository<TEntity> _repository;
     protected readonly IMapper _mapper;
