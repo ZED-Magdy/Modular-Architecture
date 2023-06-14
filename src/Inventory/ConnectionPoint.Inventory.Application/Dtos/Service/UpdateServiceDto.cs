@@ -1,8 +1,6 @@
-using ConnectionPoint.Inventory.Application.Dtos.Category;
+namespace ConnectionPoint.Inventory.Application.Dtos.Service;
 
-namespace ConnectionPoint.Inventory.Application.Dtos.Product;
-
-public class CreateProductDto
+public class UpdateServiceDto
 {
     public string NameAr { get; set; } = string.Empty;
     public string NameEn { get; set; } = string.Empty;
@@ -22,9 +20,7 @@ public class CreateProductDto
     public DiscountTypeDto DiscountType { get; set; }
     public bool AvailableOnShop { get; set; } = false;
     public string Barcode { get; set; } = string.Empty;
-    /// <summary>
-    ///  0 = Single, 1 = Variant
-    /// </summary>
-    public ProductTypeDto ProductType { get; set; } = ProductTypeDto.Single;
+    public ServiceTypeDto ServiceType { get; set; } = ServiceTypeDto.Single;
+    public IList<Guid> EmployeesIds { get; set; } = new List<Guid>();
     public IList<Guid> CategoriesIds { get; set; } = new List<Guid>();
 }

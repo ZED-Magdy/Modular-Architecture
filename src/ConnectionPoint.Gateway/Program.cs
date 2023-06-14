@@ -30,8 +30,8 @@ if (app.Environment.IsDevelopment())
 }
 
 
-app.UseHttpsRedirection();
-app.UseHsts();
+// app.UseHttpsRedirection();
+// app.UseHsts();
 app.UseAuthorization();
 
 app.MapControllers();
