@@ -2,7 +2,7 @@
 
 namespace ConnectionPoint.Inventory.Domain.Entities;
 
-public class Category : FullAuditedEntityDto
+public class Category : FullAuditedEntity
 {
     public string? NameAr { get; set; }
     public string? NameEn { get; set; }

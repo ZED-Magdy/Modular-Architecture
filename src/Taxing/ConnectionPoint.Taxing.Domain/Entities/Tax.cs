@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConnectionPoint.Taxing.Domain.Entities
 {
-    public class Tax : FullAuditedEntityDto
+    public class Tax : FullAuditedEntity
     {
         public string Name { get; set; }
         public string Description { get; set; }

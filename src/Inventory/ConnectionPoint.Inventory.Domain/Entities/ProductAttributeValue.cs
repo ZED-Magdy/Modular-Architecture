@@ -2,7 +2,7 @@ using ConnectionPoint.Core.Domain.Entities;
 
 namespace ConnectionPoint.Inventory.Domain.Entities;
 
-public class ProductAttributeValue : FullAuditedEntityDto
+public class ProductAttributeValue : FullAuditedEntity
 {
     public string Name { get; set; }
     public Guid ProductAttributeId { get; set; }

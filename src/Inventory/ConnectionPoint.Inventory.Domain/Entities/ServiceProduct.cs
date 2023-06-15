@@ -2,7 +2,7 @@
 
 namespace ConnectionPoint.Inventory.Domain.Entities;
 
-public class ServiceProduct : FullAuditedEntityDto
+public class ServiceProduct : FullAuditedEntity
 {
     public Guid ServiceId { get; set; }
     public Guid ProductId { get; set; }

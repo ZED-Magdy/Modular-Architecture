@@ -2,7 +2,7 @@
 
 namespace ConnectionPoint.Taxing.Application.DTOs.Tax
 {
-    public class UpdateTaxDto:FullAuditedEntityDto
+    public class UpdateTaxDto
     {
         public string Name { get; set; }
         public string Description { get; set; }
