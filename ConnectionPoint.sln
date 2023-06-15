@@ -41,15 +41,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Taxing.Infr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Taxing.Domain", "src\Taxing\ConnectionPoint.Taxing.Domain\ConnectionPoint.Taxing.Domain.csproj", "{56414266-FA7E-481D-9B07-E908F736BAFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Voucher.Application", "src\Voucher\ConnectionPoint.Voucher.Application\ConnectionPoint.Voucher.Application.csproj", "{3DC4AEE8-26A7-482B-9A09-48EF1D18AAD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Voucher.Application", "src\Voucher\ConnectionPoint.Voucher.Application\ConnectionPoint.Voucher.Application.csproj", "{3DC4AEE8-26A7-482B-9A09-48EF1D18AAD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Voucher.Domain", "src\Voucher\ConnectionPoint.Voucher.Domain\ConnectionPoint.Voucher.Domain.csproj", "{5A15E11B-DBD5-4065-A75E-0075477CC0E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Voucher.Domain", "src\Voucher\ConnectionPoint.Voucher.Domain\ConnectionPoint.Voucher.Domain.csproj", "{5A15E11B-DBD5-4065-A75E-0075477CC0E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Voucher.Infrastructure", "src\Voucher\ConnectionPoint.Voucher.Infrastructure\ConnectionPoint.Voucher.Infrastructure.csproj", "{DFCFDA51-D4A3-40EB-B378-CE341030B878}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Voucher.Infrastructure", "src\Voucher\ConnectionPoint.Voucher.Infrastructure\ConnectionPoint.Voucher.Infrastructure.csproj", "{DFCFDA51-D4A3-40EB-B378-CE341030B878}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1715DB75-8BC1-4C73-B49E-663C47E9E8EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Taxing.FunctionalTest", "src\Taxing\ConnectionPoint.Taxing.FunctionalTest\ConnectionPoint.Taxing.FunctionalTest.csproj", "{E7CA576E-3947-445E-B6D9-4EB6EF8E8743}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionPoint.Taxing.FunctionalTest", "src\Taxing\ConnectionPoint.Taxing.FunctionalTest\ConnectionPoint.Taxing.FunctionalTest.csproj", "{E7CA576E-3947-445E-B6D9-4EB6EF8E8743}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{42FF85D3-57F2-4844-8FED-9A71BABF248E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPoint.Voucher.FunctionalTest", "ConnectionPoint.Voucher.FunctionalTest\ConnectionPoint.Voucher.FunctionalTest.csproj", "{FEBFCFF8-9F2C-4F45-8BAB-3E23E4C53D10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -113,6 +117,10 @@ Global
 		{E7CA576E-3947-445E-B6D9-4EB6EF8E8743}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7CA576E-3947-445E-B6D9-4EB6EF8E8743}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7CA576E-3947-445E-B6D9-4EB6EF8E8743}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEBFCFF8-9F2C-4F45-8BAB-3E23E4C53D10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEBFCFF8-9F2C-4F45-8BAB-3E23E4C53D10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEBFCFF8-9F2C-4F45-8BAB-3E23E4C53D10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEBFCFF8-9F2C-4F45-8BAB-3E23E4C53D10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -141,6 +149,8 @@ Global
 		{DFCFDA51-D4A3-40EB-B378-CE341030B878} = {96300E04-A69E-4183-A43C-0F3734B8BB57}
 		{1715DB75-8BC1-4C73-B49E-663C47E9E8EA} = {42CA4740-BC8F-4140-86C4-401C13300141}
 		{E7CA576E-3947-445E-B6D9-4EB6EF8E8743} = {1715DB75-8BC1-4C73-B49E-663C47E9E8EA}
+		{42FF85D3-57F2-4844-8FED-9A71BABF248E} = {96300E04-A69E-4183-A43C-0F3734B8BB57}
+		{FEBFCFF8-9F2C-4F45-8BAB-3E23E4C53D10} = {42FF85D3-57F2-4844-8FED-9A71BABF248E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {84293F29-5BD0-4998-B260-D0E7E4F92CEE}
