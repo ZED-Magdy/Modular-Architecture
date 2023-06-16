@@ -13,13 +13,12 @@ public static class DependencyInjection
     public static IServiceCollection AddModuleDatabaseContext<TDbContext>(this IServiceCollection services,
         IConfiguration configuration) where TDbContext : DbContext
     {
-        Console.WriteLine($"the configurations is {configuration.GetConnectionString("Default")}");
         services.AddDbContext<TDbContext>(o => 
             o.UseNpgsql(configuration.GetConnectionString("Default"), 
                 e => 
                     e.MigrationsAssembly(typeof(TDbContext).Assembly.FullName)));
-        using var scope = services.BuildServiceProvider().CreateScope();
-        var dbContext = scope.ServiceProvider.GetRequiredService<TDbContext>();
+        // using var scope = services.BuildServiceProvider().CreateScope();
+        // var dbContext = scope.ServiceProvider.GetRequiredService<TDbContext>();
         // dbContext.Database.Migrate();
         return services;
     }

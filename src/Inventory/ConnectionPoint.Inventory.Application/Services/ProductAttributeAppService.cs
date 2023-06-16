@@ -3,12 +3,13 @@ using AutoMapper;
 using ConnectionPoint.Core.Application.Services;
 using ConnectionPoint.Core.Domain.Repositories;
 using ConnectionPoint.Inventory.Application.Dtos.ProductAttribute;
+using ConnectionPoint.Inventory.Application.Services.Contracts;
 using ConnectionPoint.Inventory.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace ConnectionPoint.Inventory.Application.Services;
 
-public class ProductAttributeAppService : CrudAppService<ProductAttribute, Guid, ProductAttributeDto, CreateProductAttributeDto, UpdateProductAttributeDto>
+public class ProductAttributeAppService : CrudAppService<ProductAttribute, Guid, ProductAttributeDto, CreateProductAttributeDto, UpdateProductAttributeDto>, IProductAttributeAppService
 {
     public ProductAttributeAppService(IRepository<ProductAttribute> repository, IMapper mapper) : base(repository, mapper)
     {

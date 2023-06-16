@@ -676,7 +676,7 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
             modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.ProductAttributeValue", b =>
                 {
                     b.HasOne("ConnectionPoint.Inventory.Domain.Entities.ProductAttribute", "ProductAttribute")
-                        .WithMany()
+                        .WithMany("Values")
                         .HasForeignKey("ProductAttributeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -781,6 +781,8 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
 
             modelBuilder.Entity("ConnectionPoint.Inventory.Domain.Entities.ProductAttribute", b =>
                 {
+                    b.Navigation("Values");
+
                     b.Navigation("Variations");
                 });
 

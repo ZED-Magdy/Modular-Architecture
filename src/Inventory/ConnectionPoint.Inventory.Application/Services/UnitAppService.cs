@@ -3,12 +3,13 @@ using AutoMapper;
 using ConnectionPoint.Core.Application.Services;
 using ConnectionPoint.Core.Domain.Repositories;
 using ConnectionPoint.Inventory.Application.Dtos.Unit;
+using ConnectionPoint.Inventory.Application.Services.Contracts;
 using ConnectionPoint.Inventory.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace ConnectionPoint.Inventory.Application.Services;
 
-public class UnitAppService : CrudAppService<Unit, Guid, UnitDto, CreateUnitDto, UpdateUnitDto>
+public class UnitAppService : CrudAppService<Unit, Guid, UnitDto, CreateUnitDto, UpdateUnitDto>, IUnitAppService
 {
     public UnitAppService(IRepository<Unit> repository, IMapper mapper) : base(repository, mapper)
     {

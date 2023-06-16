@@ -17,6 +17,7 @@ public static class InventoryApplicationModule
         services.AddScoped(typeof(IDealAppService), typeof(DealAppService));
         services.AddScoped(typeof(IUnitAppService), typeof(UnitAppService));
         services.AddScoped(typeof(IProductAttributeAppService), typeof(ProductAttributeAppService));
+        services.AddScoped(typeof(IProductAttributeValueAppService), typeof(ProductAttributeValueAppService));
         services.AddAutoMapper(typeof(InventoryApplicationModule).Assembly);
         return services;
     }
