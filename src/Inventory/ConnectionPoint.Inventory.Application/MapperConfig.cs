@@ -4,6 +4,7 @@ using ConnectionPoint.Inventory.Application.Dtos.Category;
 using ConnectionPoint.Inventory.Application.Dtos.Deal;
 using ConnectionPoint.Inventory.Application.Dtos.Product;
 using ConnectionPoint.Inventory.Application.Dtos.Service;
+using ConnectionPoint.Inventory.Application.Dtos.Unit;
 using ConnectionPoint.Inventory.Domain.Entities;
 
 namespace ConnectionPoint.Inventory.Application;
@@ -35,6 +36,12 @@ public class MapperConfig : Profile
             CreateMap<Deal, DealDto>();
             CreateMap<UpdateDealDto, Deal>();
             CreateMap<CreateDealDto, Deal>();
+        #endregion
+        
+        #region Unit
+            CreateMap<Unit, UnitDto>();
+            CreateMap<CreateUnitDto, Unit>();
+            CreateMap<UpdateUnitDto, Unit>();
         #endregion
     }
 }
