@@ -47,12 +47,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Localization/inventory.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Localization/inventory.resx" afterDir="false" />
+    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="Add ProductAttribute crud">
+      <change afterPath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Controllers/ProductAttributeValuesController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttributeValue/CreateProductAttributeValueDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttributeValue/ProductAttributeValueDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttributeValue/UpdateProductAttributeValueDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/Contracts/IProductAttributeValueAppService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ProductAttributeValueAppService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConnectionPoint.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ConnectionPoint.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/ConnectionPoint.Inventory.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/ConnectionPoint.Inventory.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Infrastructure/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttribute/ProductAttributeDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttribute/ProductAttributeDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/InventoryApplicationModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/InventoryApplicationModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/MapperConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/MapperConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ProductAttributeAppService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ProductAttributeAppService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/UnitAppService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/UnitAppService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/ProductAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/ProductAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Persistence/EFCore/InventoryDBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Persistence/EFCore/InventoryDbContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,12 +77,25 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
   <component name="GithubProjectSettings">
     <option name="branchProtectionPatterns">
       <list>
         <option value="main" />
         <option value="staging" />
       </list>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="e91b46a0-3f7a-468c-8566-e1726bb94422" />
+        <option name="url" value="git@github.com:ZED-Magdy/Con-point.git" />
+      </UrlAndAccount>
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -793,7 +816,9 @@
       <workItem from="1686758791503" duration="21000" />
       <workItem from="1686770570312" duration="45000" />
       <workItem from="1686770661667" duration="1027000" />
-      <workItem from="1686771726783" duration="1185000" />
+      <workItem from="1686771726783" duration="5013000" />
+      <workItem from="1686842004502" duration="1249000" />
+      <workItem from="1686894825444" duration="5341000" />
     </task>
     <task id="LOCAL؜٠٠٠٠١" summary="Create Inventory domain">
       <created>1684545942931</created>
@@ -885,7 +910,42 @@
       <option name="presentableId" value="LOCAL؜٠٠٠١٥" />
       <updated>1686692273523</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add testing">
+      <created>1686773958041</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1686773958042</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add tests for taxing">
+      <created>1686774017738</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1686774017738</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Create Deals Crud">
+      <created>1686897892123</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1686897892123</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add Units Crud">
+      <created>1686898423487</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1686898423487</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Add ProductAttribute crud">
+      <created>1686899098863</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1686899098863</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -951,6 +1011,11 @@
     <MESSAGE value="Fix #20" />
     <MESSAGE value="fix get service list controller" />
     <MESSAGE value="add sorting" />
-    <option name="LAST_COMMIT_MESSAGE" value="add sorting" />
+    <MESSAGE value="add testing" />
+    <MESSAGE value="add tests for taxing" />
+    <MESSAGE value="Create Deals Crud" />
+    <MESSAGE value="Add Units Crud" />
+    <MESSAGE value="Add ProductAttribute crud" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ProductAttribute crud" />
   </component>
 </project>
