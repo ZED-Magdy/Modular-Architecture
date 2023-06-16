@@ -36,25 +36,25 @@ public class InventoryDbContext : ModuleDbContext, IInventoryDbContext
         modelBuilder.Entity<Service>()
             .Property(s => s.EmployeesIds)
             .HasConversion(
-                v =>  v == null ? "" : string.Join(',', v),
+                v =>  v == null || v!.Count == 0 ? "" : string.Join(',', v),
                 v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(Guid.Parse).ToList());
         
         modelBuilder.Entity<Service>()
             .Property(s => s.TaxesIds)
             .HasConversion(
-                v =>  v == null ? "" : string.Join(',', v),
+                v =>  v == null || v!.Count == 0 ? "" : string.Join(',', v),
                 v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(Guid.Parse).ToList());
 
         modelBuilder.Entity<Product>()
             .Property(s => s.TaxesIds)
             .HasConversion(
-                v => v == null ? "" : string.Join(',', v),
+                v => v == null || v!.Count == 0 ? "" : string.Join(',', v),
                 v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(Guid.Parse).ToList());
         
         modelBuilder.Entity<Deal>()
             .Property(s => s.TaxesIds)
             .HasConversion(
-                v =>  v == null ? "" : string.Join(',', v),
+                v =>  v == null || v!.Count == 0 ? "" : string.Join(',', v),
                 v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(Guid.Parse).ToList());
         
         modelBuilder.Entity<ProductVariation>()
