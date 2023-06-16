@@ -19,7 +19,7 @@ public class UpdateServiceDto
     /// </summary>
     public DiscountTypeDto DiscountType { get; set; }
     public bool AvailableOnShop { get; set; } = false;
-    public string Barcode { get; set; } = string.Empty;
+    public bool Active { get; set; } = true;
     public ServiceTypeDto ServiceType { get; set; } = ServiceTypeDto.Single;
     public IList<Guid> EmployeesIds { get; set; } = new List<Guid>();
     public IList<Guid> CategoriesIds { get; set; } = new List<Guid>();

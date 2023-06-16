@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using ConnectionPoint.Inventory.Application.Dtos;
 using ConnectionPoint.Inventory.Application.Dtos.Category;
+using ConnectionPoint.Inventory.Application.Dtos.Deal;
 using ConnectionPoint.Inventory.Application.Dtos.Product;
 using ConnectionPoint.Inventory.Application.Dtos.Service;
 using ConnectionPoint.Inventory.Domain.Entities;
@@ -20,7 +21,7 @@ public class MapperConfig : Profile
         #region Product
             CreateMap<Product, ProductDto>();
             CreateMap<CreateProductDto, Product>();
-                CreateMap<UpdateProductDto, Product>();
+            CreateMap<UpdateProductDto, Product>();
         #endregion
         
         #region Service
@@ -30,5 +31,10 @@ public class MapperConfig : Profile
 
             #endregion
 
+        #region Deal
+            CreateMap<Deal, DealDto>();
+            CreateMap<UpdateDealDto, Deal>();
+            CreateMap<CreateDealDto, Deal>();
+        #endregion
     }
 }

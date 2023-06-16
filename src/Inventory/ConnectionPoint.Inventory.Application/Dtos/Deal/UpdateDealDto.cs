@@ -1,8 +1,6 @@
-using ConnectionPoint.Inventory.Application.Dtos.Category;
+﻿namespace ConnectionPoint.Inventory.Application.Dtos.Deal;
 
-namespace ConnectionPoint.Inventory.Application.Dtos.Product;
-
-public class UpdateProductDto
+public class UpdateDealDto
 {
     public string NameAr { get; set; } = string.Empty;
     public string NameEn { get; set; } = string.Empty;
@@ -21,11 +19,13 @@ public class UpdateProductDto
     /// </summary>
     public DiscountTypeDto DiscountType { get; set; }
     public bool AvailableOnShop { get; set; } = false;
-    public string Barcode { get; set; } = string.Empty;
-    /// <summary>
-    ///  0 = Single, 1 = Variant
-    /// </summary>
-    public ProductTypeDto ProductType { get; set; } = ProductTypeDto.Single;
-    public IList<Guid> CategoriesIds { get; set; } = new List<Guid>();
+    public int TotalLimit { get; set; } = 0;
+    public int PerUserLimit { get; set; } = 0;
+    public DateTime StartsOn { get; set; } = DateTime.UtcNow;
+    public DateTime EndsOn { get; set; } = DateTime.UtcNow;
     public bool Active { get; set; } = true;
+    public IList<DayDto> AvailableOn { get; set; } = new List<DayDto>();
+    public IList<Guid> ServicesIds { get; set; } = new List<Guid>();
+    public IList<Guid> ProductsIds { get; set; } = new List<Guid>();
+    public IList<Guid> DealsIds { get; set; } = new List<Guid>();
 }

@@ -47,12 +47,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Localization/inventory.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Localization/inventory.resx" afterDir="false" />
+    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="add tests for taxing">
+      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Deal/CreateDealDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Deal/DayDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Deal/DealDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Deal/UpdateDealDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/Contracts/IDealAppService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/DealAppService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConnectionPoint.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ConnectionPoint.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/ConnectionPoint.Inventory.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/ConnectionPoint.Inventory.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Category/CreateCategoryDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Category/CreateCategoryDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Category/UpdateCategoryDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Category/UpdateCategoryDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Product/CreateProductDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Product/CreateProductDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Product/UpdateProductDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Product/UpdateProductDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Service/CreateServiceDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Service/CreateServiceDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Service/UpdateServiceDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Service/UpdateServiceDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/InventoryApplicationModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/InventoryApplicationModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/MapperConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/MapperConfig.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -793,7 +803,9 @@
       <workItem from="1686758791503" duration="21000" />
       <workItem from="1686770570312" duration="45000" />
       <workItem from="1686770661667" duration="1027000" />
-      <workItem from="1686771726783" duration="1185000" />
+      <workItem from="1686771726783" duration="5013000" />
+      <workItem from="1686842004502" duration="1249000" />
+      <workItem from="1686894825444" duration="2436000" />
     </task>
     <task id="LOCAL؜٠٠٠٠١" summary="Create Inventory domain">
       <created>1684545942931</created>
@@ -885,7 +897,21 @@
       <option name="presentableId" value="LOCAL؜٠٠٠١٥" />
       <updated>1686692273523</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add testing">
+      <created>1686773958041</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1686773958042</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add tests for taxing">
+      <created>1686774017738</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1686774017738</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -951,6 +977,8 @@
     <MESSAGE value="Fix #20" />
     <MESSAGE value="fix get service list controller" />
     <MESSAGE value="add sorting" />
-    <option name="LAST_COMMIT_MESSAGE" value="add sorting" />
+    <MESSAGE value="add testing" />
+    <MESSAGE value="add tests for taxing" />
+    <option name="LAST_COMMIT_MESSAGE" value="add tests for taxing" />
   </component>
 </project>

@@ -22,6 +22,7 @@ public class CreateProductDto
     public DiscountTypeDto DiscountType { get; set; }
     public bool AvailableOnShop { get; set; } = false;
     public string Barcode { get; set; } = string.Empty;
+    public bool Active { get; set; } = true;
     /// <summary>
     ///  0 = Single, 1 = Variant
     /// </summary>
