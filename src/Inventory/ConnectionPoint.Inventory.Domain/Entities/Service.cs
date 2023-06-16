@@ -9,5 +9,5 @@ public class Service : ProductBase
     public IList<Category> Categories { get; set; } = new List<Category>();
     public IList<ServiceProduct> ServiceProducts { get; set; } = new List<ServiceProduct>();
     [Column(TypeName = "jsonb")]
-    public IList<Guid>? EmployeesIds { get; set; } = null;
+    public IList<Guid>? EmployeesIds { get; set; }
 }
