@@ -47,10 +47,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="Create Deals Crud">
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Unit/CreateUnitDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Unit/UnitDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Unit/UpdateUnitDto.cs" afterDir="false" />
+    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="Add Units Crud">
+      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttribute/CreateProductAttributeDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttribute/ProductAttributeDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttribute/UpdateProductAttributeDto.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -793,7 +793,7 @@
       <workItem from="1686770661667" duration="1027000" />
       <workItem from="1686771726783" duration="5013000" />
       <workItem from="1686842004502" duration="1249000" />
-      <workItem from="1686894825444" duration="2855000" />
+      <workItem from="1686894825444" duration="3582000" />
     </task>
     <task id="LOCAL؜٠٠٠٠١" summary="Create Inventory domain">
       <created>1684545942931</created>
@@ -906,7 +906,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686897892123</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Add Units Crud">
+      <created>1686898423487</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1686898423487</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -975,6 +982,7 @@
     <MESSAGE value="add testing" />
     <MESSAGE value="add tests for taxing" />
     <MESSAGE value="Create Deals Crud" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Deals Crud" />
+    <MESSAGE value="Add Units Crud" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Units Crud" />
   </component>
 </project>
