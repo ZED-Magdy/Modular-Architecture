@@ -11,5 +11,6 @@ namespace ConnectionPoint.Voucher.Domain.Entities
         public CouponDiscountType DiscountType { get; set; } = CouponDiscountType.Percentage;
         public DateTime? ExpirationDate { get; set; }
         public int UseLimit { get; set; } = 1;
+        public List<Discountable> Discountables { get; set; } = new List<Discountable>();
     }
 }
