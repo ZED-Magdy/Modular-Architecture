@@ -1,6 +1,7 @@
 ﻿using ConnectionPoint.Core.Infrastructure.Persistence.EFCore;
 using ConnectionPoint.Inventory.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 
 namespace ConnectionPoint.Inventory.Infrastructure.Persistence.EFCore;
 
@@ -36,27 +37,36 @@ public class InventoryDbContext : ModuleDbContext, IInventoryDbContext
         modelBuilder.Entity<Service>()
             .Property(s => s.EmployeesIds)
             .HasConversion(
-                v =>  v == null ? "" : string.Join(',', v),
-                v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(Guid.Parse).ToList());
-        
+                v => v.Any() ? $"[{string.Join(",", v.Select(g => $"\"{g}\""))}]" : "[]",
+                v => !string.IsNullOrEmpty(v)
+                    ? JArray.Parse(v).Select(token => Guid.Parse(token.ToString())).ToList()
+                    : new List<Guid>()
+            );
         modelBuilder.Entity<Service>()
             .Property(s => s.TaxesIds)
             .HasConversion(
-                v =>  v == null ? "" : string.Join(',', v),
-                v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(Guid.Parse).ToList());
+                v => v.Any() ? $"[{string.Join(",", v.Select(g => $"\"{g}\""))}]" : "[]",
+                v => !string.IsNullOrEmpty(v)
+                    ? JArray.Parse(v).Select(token => Guid.Parse(token.ToString())).ToList()
+                    : new List<Guid>()
+            );
 
         modelBuilder.Entity<Product>()
             .Property(s => s.TaxesIds)
             .HasConversion(
-                v => v == null ? "" : string.Join(',', v),
-                v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(Guid.Parse).ToList());
-        
+                v => v.Any() ? $"[{string.Join(",", v.Select(g => $"\"{g}\""))}]" : "[]",
+                v => !string.IsNullOrEmpty(v)
+                    ? JArray.Parse(v).Select(token => Guid.Parse(token.ToString())).ToList()
+                    : new List<Guid>()
+            );
         modelBuilder.Entity<Deal>()
             .Property(s => s.TaxesIds)
             .HasConversion(
-                v =>  v == null ? "" : string.Join(',', v),
-                v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).Select(Guid.Parse).ToList());
-        
+                v => v.Any() ? $"[{string.Join(",", v.Select(g => $"\"{g}\""))}]" : "[]",
+                v => !string.IsNullOrEmpty(v)
+                    ? JArray.Parse(v).Select(token => Guid.Parse(token.ToString())).ToList()
+                    : new List<Guid>()
+            );
         modelBuilder.Entity<ProductVariation>()
             .HasKey(pv => pv.Id);
 
@@ -88,5 +98,19 @@ public class InventoryDbContext : ModuleDbContext, IInventoryDbContext
             .HasMany(pav => pav.Variations)
             .WithOne(v => v.Value)
             .HasForeignKey(v => v.ValueId);
+    }
+
+    private IList<Guid> ConvertListToGuid(string? s)
+    {
+        Console.WriteLine(s);
+        return !string.IsNullOrEmpty(s)
+            ? s.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                .Select(guidString =>
+                {
+                    Guid.TryParse(guidString, out Guid guid);
+                    return guid;
+                })
+                .ToList()
+            : new List<Guid>();
     }
 }

@@ -13,6 +13,11 @@ public static class InventoryApplicationModule
         services.AddInventoryInfrastructure(configuration);
         services.AddScoped(typeof(ICategoryAppService), typeof(CategoryAppService));
         services.AddScoped(typeof(IProductAppService), typeof(ProductAppService));
+        services.AddScoped(typeof(IServiceAppService), typeof(ServiceAppService));
+        services.AddScoped(typeof(IDealAppService), typeof(DealAppService));
+        services.AddScoped(typeof(IUnitAppService), typeof(UnitAppService));
+        services.AddScoped(typeof(IProductAttributeAppService), typeof(ProductAttributeAppService));
+        services.AddScoped(typeof(IProductAttributeValueAppService), typeof(ProductAttributeValueAppService));
         services.AddAutoMapper(typeof(InventoryApplicationModule).Assembly);
         return services;
     }

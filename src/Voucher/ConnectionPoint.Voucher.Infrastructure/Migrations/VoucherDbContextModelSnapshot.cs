@@ -73,7 +73,6 @@ namespace ConnectionPoint.Voucher.Infrastructure.Migrations
 
                     b.ToTable("Coupons", "voucher");
                 });
-
             modelBuilder.Entity("ConnectionPoint.Voucher.Domain.Entities.Discountable", b =>
                 {
                     b.Property<Guid>("Id")
