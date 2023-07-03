@@ -17,9 +17,9 @@ public static class DependencyInjection
             o.UseNpgsql(configuration.GetConnectionString("Default"), 
                 e => 
                     e.MigrationsAssembly(typeof(TDbContext).Assembly.FullName)));
-        // using var scope = services.BuildServiceProvider().CreateScope();
-        // var dbContext = scope.ServiceProvider.GetRequiredService<TDbContext>();
-        // dbContext.Database.Migrate();
+        using var scope = services.BuildServiceProvider().CreateScope();
+        var dbContext = scope.ServiceProvider.GetRequiredService<TDbContext>();
+        dbContext.Database.Migrate();
         return services;
     }
     public static void RegisterRepositories(this IServiceCollection services, Type moduleRepository, Assembly assembly)

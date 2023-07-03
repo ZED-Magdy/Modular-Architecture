@@ -10,7 +10,7 @@ public interface IRepository<TEntity> where TEntity : class
     Task<List<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> predicate, int skip, int take,
         CancellationToken cancellationToken = default);
     Task<List<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> predicate, int skip, int take,
-        Expression<Func<TEntity, object>> orderBy, bool isDescending = false,
+        Expression<Func<TEntity, object>> orderBy, bool isDescending = false, List<string>? includes = null,
         CancellationToken cancellationToken = default);
     Task<List<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> predicate,
         Expression<Func<TEntity, object>> orderBy, bool isDescending = false,
@@ -18,7 +18,7 @@ public interface IRepository<TEntity> where TEntity : class
     Task<List<TEntity>> GetListAsync(Expression<Func<TEntity, object>> orderBy, bool isDescending = false,
         CancellationToken cancellationToken = default);
     Task<List<TEntity>> GetListAsync(int skip, int take, Expression<Func<TEntity, object>> orderBy,
-        bool isDescending = false, CancellationToken cancellationToken = default);
+        bool isDescending = false, List<string>? includes = null, CancellationToken cancellationToken = default);
     Task<List<TEntity>> GetListAsync(int skip, int take, CancellationToken cancellationToken = default);
     Task<List<TEntity>> GetListAsync(CancellationToken cancellationToken = default);
     Task<TEntity> CreateAsync(TEntity entity, CancellationToken cancellationToken = default);

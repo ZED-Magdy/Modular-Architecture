@@ -12,7 +12,6 @@ public interface IInventoryDbContext
     public DbSet<Unit>? Units { get; set; }
     public DbSet<ProductUnitQuantity>? ProductUnitQuantities { get; set; }
     public DbSet<ProductVariation>? ProductVariations { get; set; }
-    public DbSet<Variation>? Variations { get; set; }
     public DbSet<ProductAttribute>? ProductAttributes { get; set; }
     
     

@@ -3,7 +3,7 @@ using ConnectionPoint.Voucher.Application.Dtos.Discountable;
 
 namespace ConnectionPoint.Voucher.Application.Services.Contracts
 {
-    public interface IDiscountableAppService:ICrudAppService<Guid,DiscountableDto,CreateDiscountableDto,UpdateDiscountableDto>
+    public interface IDiscountableAppService:ICrudAppService<Guid,DiscountableDto, CreateDiscountableDto, UpdateDiscountableDto>
     {
     }
 }

@@ -19,7 +19,6 @@ public class InventoryDbContext : ModuleDbContext, IInventoryDbContext
     public DbSet<Unit>? Units { get; set; }
     public DbSet<ProductUnitQuantity>? ProductUnitQuantities { get; set; }
     public DbSet<ProductVariation>? ProductVariations { get; set; }
-    public DbSet<Variation>? Variations { get; set; }
     public DbSet<ProductAttribute>? ProductAttributes { get; set; }
 
 
@@ -69,48 +68,5 @@ public class InventoryDbContext : ModuleDbContext, IInventoryDbContext
             );
         modelBuilder.Entity<ProductVariation>()
             .HasKey(pv => pv.Id);
-
-        modelBuilder.Entity<ProductVariation>()
-            .HasOne(pv => pv.Product)
-            .WithMany(p => p.Variations)
-            .HasForeignKey(pv => pv.ProductId);
-
-        modelBuilder.Entity<Variation>()
-            .HasKey(v => v.Id);
-
-        modelBuilder.Entity<Variation>()
-            .HasOne(v => v.ProductVariation)
-            .WithMany(pv => pv.Variations)
-            .HasForeignKey(v => v.ProductVariationId);
-
-        modelBuilder.Entity<ProductAttribute>()
-            .HasKey(pa => pa.Id);
-
-        modelBuilder.Entity<ProductAttribute>()
-            .HasMany(pa => pa.Variations)
-            .WithOne(v => v.Attribute)
-            .HasForeignKey(v => v.AttributeId);
-
-        modelBuilder.Entity<ProductAttributeValue>()
-            .HasKey(pav => pav.Id);
-
-        modelBuilder.Entity<ProductAttributeValue>()
-            .HasMany(pav => pav.Variations)
-            .WithOne(v => v.Value)
-            .HasForeignKey(v => v.ValueId);
-    }
-
-    private IList<Guid> ConvertListToGuid(string? s)
-    {
-        Console.WriteLine(s);
-        return !string.IsNullOrEmpty(s)
-            ? s.Split(',', StringSplitOptions.RemoveEmptyEntries)
-                .Select(guidString =>
-                {
-                    Guid.TryParse(guidString, out Guid guid);
-                    return guid;
-                })
-                .ToList()
-            : new List<Guid>();
     }
 }

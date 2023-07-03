@@ -28,4 +28,5 @@ public class UpdateProductDto
     public ProductTypeDto ProductType { get; set; } = ProductTypeDto.Single;
     public IList<Guid> CategoriesIds { get; set; } = new List<Guid>();
     public bool Active { get; set; } = true;
+    public List<CreateVariationDto> Variations { get; set; } = new List<CreateVariationDto>();
 }

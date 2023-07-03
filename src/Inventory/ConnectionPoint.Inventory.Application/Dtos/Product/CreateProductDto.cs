@@ -14,12 +14,7 @@ public class CreateProductDto
     /// </summary>
     public decimal NetPrice { get; set; }
     public IList<Guid> TaxesIds { get; set; } = new List<Guid>();
-    public decimal? Discount { get; set; }
-    public decimal? DiscountPrice { get; set; }
-    /// <summary>
-    /// 0 = Percentage, 1 = Amount
-    /// </summary>
-    public DiscountTypeDto DiscountType { get; set; }
+    public Guid? CouponId { get; set; }
     public bool AvailableOnShop { get; set; } = false;
     public string Barcode { get; set; } = string.Empty;
     public bool Active { get; set; } = true;
@@ -28,4 +23,6 @@ public class CreateProductDto
     /// </summary>
     public ProductTypeDto ProductType { get; set; } = ProductTypeDto.Single;
     public IList<Guid> CategoriesIds { get; set; } = new List<Guid>();
+    public List<CreateVariationDto> Variations { get; set; } = new List<CreateVariationDto>();
 }
+public record CreateVariationDto(ICollection<Guid> AttributeValues, decimal Price, int Stock);

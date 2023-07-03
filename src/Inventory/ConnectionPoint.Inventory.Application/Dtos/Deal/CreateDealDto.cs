@@ -13,7 +13,6 @@ public class CreateDealDto
     public decimal NetPrice { get; set; }
     public IList<Guid> TaxesIds { get; set; } = new List<Guid>();
     public decimal? Discount { get; set; }
-    public decimal? DiscountPrice { get; set; }
     /// <summary>
     /// 0 = Percentage, 1 = Amount
     /// </summary>

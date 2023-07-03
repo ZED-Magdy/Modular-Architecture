@@ -17,4 +17,8 @@
       <ProjectReference Include="..\ConnectionPoint.Inventory.Domain\ConnectionPoint.Inventory.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Migrations\" />
+    </ItemGroup>
+
 </Project>

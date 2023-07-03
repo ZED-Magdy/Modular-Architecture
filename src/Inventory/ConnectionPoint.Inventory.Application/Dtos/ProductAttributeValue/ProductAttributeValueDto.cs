@@ -6,6 +6,6 @@ namespace ConnectionPoint.Inventory.Application.Dtos.ProductAttributeValue;
 public class ProductAttributeValueDto : FullAuditedDto
 {
     public string Name { get; set; }
-    public Guid ProductAttributeId { get; set; }
-    public ProductAttributeDto ProductAttribute { get; set; }
+    public Guid AttributeId { get; set; }
+    public ProductAttributeDto Attribute { get; set; }
 }

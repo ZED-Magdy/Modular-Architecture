@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ConnectionPoint.Inventory.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class FixMigrations : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -22,10 +22,10 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    NameAr = table.Column<string>(type: "text", nullable: false),
-                    NameEn = table.Column<string>(type: "text", nullable: false),
-                    DescriptionAr = table.Column<string>(type: "text", nullable: false),
-                    DescriptionEn = table.Column<string>(type: "text", nullable: false),
+                    NameAr = table.Column<string>(type: "text", nullable: true),
+                    NameEn = table.Column<string>(type: "text", nullable: true),
+                    DescriptionAr = table.Column<string>(type: "text", nullable: true),
+                    DescriptionEn = table.Column<string>(type: "text", nullable: true),
                     ParentCategoryId = table.Column<Guid>(type: "uuid", nullable: true),
                     CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uuid", nullable: false),
@@ -71,7 +71,7 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                     DescriptionEn = table.Column<string>(type: "text", nullable: false),
                     GrossPrice = table.Column<decimal>(type: "numeric", nullable: false),
                     NetPrice = table.Column<decimal>(type: "numeric", nullable: false),
-                    TaxesIds = table.Column<string>(type: "jsonb", nullable: false),
+                    TaxesIds = table.Column<string>(type: "jsonb", nullable: true),
                     Discount = table.Column<decimal>(type: "numeric", nullable: true),
                     DiscountPrice = table.Column<decimal>(type: "numeric", nullable: true),
                     DiscountType = table.Column<int>(type: "integer", nullable: false),
@@ -86,6 +86,26 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                         principalSchema: "inventory",
                         principalTable: "Deals",
                         principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProductAttributes",
+                schema: "inventory",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    CreatedBy = table.Column<Guid>(type: "uuid", nullable: false),
+                    ModifiedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    ModifiedBy = table.Column<Guid>(type: "uuid", nullable: false),
+                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    DeletedBy = table.Column<Guid>(type: "uuid", nullable: false),
+                    Active = table.Column<bool>(type: "boolean", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductAttributes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -118,7 +138,6 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                     ProductType = table.Column<int>(type: "integer", nullable: false),
                     ParentProduct = table.Column<Guid>(type: "uuid", nullable: true),
                     DealId = table.Column<Guid>(type: "uuid", nullable: true),
-                    ProductId = table.Column<Guid>(type: "uuid", nullable: true),
                     CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uuid", nullable: false),
                     ModifiedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
@@ -132,7 +151,7 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                     DescriptionEn = table.Column<string>(type: "text", nullable: false),
                     GrossPrice = table.Column<decimal>(type: "numeric", nullable: false),
                     NetPrice = table.Column<decimal>(type: "numeric", nullable: false),
-                    TaxesIds = table.Column<string>(type: "jsonb", nullable: false),
+                    TaxesIds = table.Column<string>(type: "jsonb", nullable: true),
                     Discount = table.Column<decimal>(type: "numeric", nullable: true),
                     DiscountPrice = table.Column<decimal>(type: "numeric", nullable: true),
                     DiscountType = table.Column<int>(type: "integer", nullable: false),
@@ -147,12 +166,6 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                         principalSchema: "inventory",
                         principalTable: "Deals",
                         principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Products_Products_ProductId",
-                        column: x => x.ProductId,
-                        principalSchema: "inventory",
-                        principalTable: "Products",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -162,7 +175,7 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     ServiceType = table.Column<int>(type: "integer", nullable: false),
-                    EmployeesIds = table.Column<string>(type: "text", nullable: false),
+                    EmployeesIds = table.Column<string>(type: "jsonb", nullable: true),
                     DealId = table.Column<Guid>(type: "uuid", nullable: true),
                     CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uuid", nullable: false),
@@ -177,7 +190,7 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                     DescriptionEn = table.Column<string>(type: "text", nullable: false),
                     GrossPrice = table.Column<decimal>(type: "numeric", nullable: false),
                     NetPrice = table.Column<decimal>(type: "numeric", nullable: false),
-                    TaxesIds = table.Column<string>(type: "jsonb", nullable: false),
+                    TaxesIds = table.Column<string>(type: "jsonb", nullable: true),
                     Discount = table.Column<decimal>(type: "numeric", nullable: true),
                     DiscountPrice = table.Column<decimal>(type: "numeric", nullable: true),
                     DiscountType = table.Column<int>(type: "integer", nullable: false),
@@ -222,7 +235,7 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProductUnitQuantity",
+                name: "ProductUnitQuantities",
                 schema: "inventory",
                 columns: table => new
                 {
@@ -232,21 +245,49 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductUnitQuantity", x => new { x.ProductId, x.UnitId });
+                    table.PrimaryKey("PK_ProductUnitQuantities", x => new { x.ProductId, x.UnitId });
                     table.ForeignKey(
-                        name: "FK_ProductUnitQuantity_Products_ProductId",
+                        name: "FK_ProductUnitQuantities_Products_ProductId",
                         column: x => x.ProductId,
                         principalSchema: "inventory",
                         principalTable: "Products",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ProductUnitQuantity_Units_UnitId",
+                        name: "FK_ProductUnitQuantities_Units_UnitId",
                         column: x => x.UnitId,
                         principalSchema: "inventory",
                         principalTable: "Units",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProductVariations",
+                schema: "inventory",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Price = table.Column<decimal>(type: "numeric", nullable: false),
+                    Stock = table.Column<int>(type: "integer", nullable: false),
+                    ProductId = table.Column<Guid>(type: "uuid", nullable: true),
+                    CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    CreatedBy = table.Column<Guid>(type: "uuid", nullable: false),
+                    ModifiedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    ModifiedBy = table.Column<Guid>(type: "uuid", nullable: false),
+                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    DeletedBy = table.Column<Guid>(type: "uuid", nullable: false),
+                    Active = table.Column<bool>(type: "boolean", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductVariations", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ProductVariations_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalSchema: "inventory",
+                        principalTable: "Products",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -311,6 +352,41 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "ProductAttributeValue",
+                schema: "inventory",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    AttributeId = table.Column<Guid>(type: "uuid", nullable: false),
+                    ProductVariationId = table.Column<Guid>(type: "uuid", nullable: true),
+                    CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    CreatedBy = table.Column<Guid>(type: "uuid", nullable: false),
+                    ModifiedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    ModifiedBy = table.Column<Guid>(type: "uuid", nullable: false),
+                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    DeletedBy = table.Column<Guid>(type: "uuid", nullable: false),
+                    Active = table.Column<bool>(type: "boolean", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductAttributeValue", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ProductAttributeValue_ProductAttributes_AttributeId",
+                        column: x => x.AttributeId,
+                        principalSchema: "inventory",
+                        principalTable: "ProductAttributes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ProductAttributeValue_ProductVariations_ProductVariationId",
+                        column: x => x.ProductVariationId,
+                        principalSchema: "inventory",
+                        principalTable: "ProductVariations",
+                        principalColumn: "Id");
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Categories_ParentCategoryId",
                 schema: "inventory",
@@ -343,22 +419,34 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                 column: "DealId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ProductAttributeValue_AttributeId",
+                schema: "inventory",
+                table: "ProductAttributeValue",
+                column: "AttributeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProductAttributeValue_ProductVariationId",
+                schema: "inventory",
+                table: "ProductAttributeValue",
+                column: "ProductVariationId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Products_DealId",
                 schema: "inventory",
                 table: "Products",
                 column: "DealId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_ProductId",
+                name: "IX_ProductUnitQuantities_UnitId",
                 schema: "inventory",
-                table: "Products",
-                column: "ProductId");
+                table: "ProductUnitQuantities",
+                column: "UnitId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductUnitQuantity_UnitId",
+                name: "IX_ProductVariations_ProductId",
                 schema: "inventory",
-                table: "ProductUnitQuantity",
-                column: "UnitId");
+                table: "ProductVariations",
+                column: "ProductId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ServiceProduct_ProductId",
@@ -391,7 +479,11 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                 schema: "inventory");
 
             migrationBuilder.DropTable(
-                name: "ProductUnitQuantity",
+                name: "ProductAttributeValue",
+                schema: "inventory");
+
+            migrationBuilder.DropTable(
+                name: "ProductUnitQuantities",
                 schema: "inventory");
 
             migrationBuilder.DropTable(
@@ -403,15 +495,23 @@ namespace ConnectionPoint.Inventory.Infrastructure.Migrations
                 schema: "inventory");
 
             migrationBuilder.DropTable(
+                name: "ProductAttributes",
+                schema: "inventory");
+
+            migrationBuilder.DropTable(
+                name: "ProductVariations",
+                schema: "inventory");
+
+            migrationBuilder.DropTable(
                 name: "Units",
                 schema: "inventory");
 
             migrationBuilder.DropTable(
-                name: "Products",
+                name: "Services",
                 schema: "inventory");
 
             migrationBuilder.DropTable(
-                name: "Services",
+                name: "Products",
                 schema: "inventory");
 
             migrationBuilder.DropTable(

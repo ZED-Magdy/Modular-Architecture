@@ -22,9 +22,13 @@ public class MapperConfig : Profile
         #endregion
 
         #region Product
+
+            CreateMap<ProductVariation, VariationDto>();
             CreateMap<Product, ProductDto>();
-            CreateMap<CreateProductDto, Product>();
-            CreateMap<UpdateProductDto, Product>();
+            CreateMap<CreateProductDto, Product>()
+            .ForMember(s => s.Variations, o => o.Ignore());
+            CreateMap<UpdateProductDto, Product>()
+            .ForMember(s => s.Variations, o => o.Ignore());
         #endregion
         
         #region Service

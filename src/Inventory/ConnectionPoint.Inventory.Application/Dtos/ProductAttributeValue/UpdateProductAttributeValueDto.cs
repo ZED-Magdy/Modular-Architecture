@@ -3,5 +3,5 @@
 public class UpdateProductAttributeValueDto
 {
     public string Name { get; set; }
-    public Guid ProductAttributeId { get; set; }
+    public Guid AttributeId { get; set; }
 }

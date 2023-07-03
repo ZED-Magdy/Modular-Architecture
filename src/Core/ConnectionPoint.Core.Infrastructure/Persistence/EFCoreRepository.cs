@@ -35,13 +35,18 @@ public abstract class EFCoreRepository<TEntity> : IRepository<TEntity> where TEn
     }
 
     public async Task<List<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> predicate, int skip, int take,
-        Expression<Func<TEntity, object>> orderBy, bool isDescending = false,
+        Expression<Func<TEntity, object>> orderBy, bool isDescending,
+        List<string>? includes,
         CancellationToken cancellationToken = default)
     {
+        var query = _dbContext.Set<TEntity>()!.Where(predicate).Skip(skip).Take(take);
+        if(includes != null)
+            query = includes.Aggregate(query, (current, include) => current.Include(include));
+        
         return isDescending
-            ? await _dbContext.Set<TEntity>()!.Where(predicate).OrderByDescending(orderBy).Skip(skip).Take(take)
+            ? await query.OrderByDescending(orderBy)
                 .ToListAsync(cancellationToken)
-            : await _dbContext.Set<TEntity>()!.Where(predicate).OrderBy(orderBy).Skip(skip).Take(take)
+            : await query.OrderBy(orderBy)
                 .ToListAsync(cancellationToken);
     }
 
@@ -63,12 +68,16 @@ public abstract class EFCoreRepository<TEntity> : IRepository<TEntity> where TEn
     }
 
     public async Task<List<TEntity>> GetListAsync(int skip, int take, Expression<Func<TEntity, object>> orderBy,
-        bool isDescending = false, CancellationToken cancellationToken = default)
+        bool isDescending, List<string>? includes, CancellationToken cancellationToken = default)
     {
+        var query = _dbContext.Set<TEntity>()!.Skip(skip).Take(take);
+        if(includes != null)
+            query = includes.Aggregate(query, (current, include) => current.Include(include));
         return isDescending
-            ? await _dbContext.Set<TEntity>()!.OrderByDescending(orderBy).Skip(skip).Take(take)
+            ? await query.OrderByDescending(orderBy)
                 .ToListAsync(cancellationToken)
-            : await _dbContext.Set<TEntity>()!.OrderBy(orderBy).Skip(skip).Take(take).ToListAsync(cancellationToken);
+            : await query.OrderBy(orderBy)
+                .ToListAsync(cancellationToken);
     }
 
     public async Task<List<TEntity>> GetListAsync(int skip, int take, CancellationToken cancellationToken = default)

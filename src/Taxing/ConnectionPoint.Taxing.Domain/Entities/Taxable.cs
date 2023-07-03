@@ -11,21 +11,28 @@ namespace ConnectionPoint.Taxing.Domain.Entities
         public decimal NetPrice { get; set; }
         public IList<Tax> Taxes { get; set; } = new List<Tax>();
         public Taxable() { }
-        public void Create(Guid taxableId, string taxableType, decimal Price, IList<Tax> taxes)
+        public static Taxable Create(Guid taxableId, string taxableType, decimal price, IList<Tax> taxes)
         {
-            TaxableId = taxableId;
-            TaxableType = taxableType;
-            Taxes = taxes;
-            GrossPrice = Price;
-            foreach (var tax in Taxes)
+            var taxable = new Taxable();
+            taxable.TaxableId = taxableId;
+            taxable.TaxableType = taxableType;
+            taxable.Taxes = taxes;
+            taxable.GrossPrice = 0;
+            taxable.CalculateTaxes(price, taxes);
+            return taxable;
+        }
+
+        public void CalculateTaxes(decimal price, IList<Tax> taxes)
+        {
+            foreach (var tax in taxes)
             {
                 if (tax.TaxType == TaxType.Included)
                 {
-                    NetPrice += Price / (1 + tax.Rate / 100);
+                    GrossPrice += price / (1 + tax.Rate / 100);
                 }
                 else
                 {
-                    NetPrice += Price;
+                    GrossPrice += price;
                 }
             }
         }

@@ -7,6 +7,7 @@ using ConnectionPoint.Taxing.Domain.Entities;
 using System;
 using System.Linq;
 using System.Linq.Expressions;
+using ConnectionPoint.Taxing.Domain.Entities.Enums;
 
 namespace ConnectionPoint.Taxing.Application.Services
 {
@@ -25,8 +26,8 @@ namespace ConnectionPoint.Taxing.Application.Services
         {
             Expression<Func<Tax, bool>> predicate = (e) => input.TaxesIds.Contains(e.Id); 
             List<Tax> taxes = await taxRepository.GetListAsync(predicate);
-            Taxable taxable = new Taxable();
-            taxable.Create(input.TaxableId, input.TaxableType, input.GrossPrice, taxes);
+            
+            Taxable taxable = Taxable.Create(input.TaxableId, input.TaxableType, input.GrossPrice, taxes);
             var entity = await repository.CreateAsync(taxable, cancellationToken);
             TaxableDto result = mapper.Map<Taxable,TaxableDto>(entity); 
             return result;
@@ -38,14 +39,14 @@ namespace ConnectionPoint.Taxing.Application.Services
             {
                 return default;
             }
-
+        
             if (input.TaxesIds.Count <= 0)
             {
                 await _repository.DeleteAsync(taxEntity, cancellationToken);
             }
             Expression<Func<Tax, bool>> predicate = (e) => input.TaxesIds.Contains(e.Id);
             List<Tax> taxes = await taxRepository.GetListAsync(predicate);
-            taxEntity.Create(input.TaxableId, input.TaxableType, input.GrossPrice, taxes);
+            taxEntity.CalculateTaxes(input.GrossPrice, taxes);
             var entity = await repository.UpdateAsync(taxEntity, cancellationToken);
             TaxableDto result = mapper.Map<Taxable, TaxableDto>(entity);
             return result;

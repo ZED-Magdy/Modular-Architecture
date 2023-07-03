@@ -28,11 +28,18 @@ public abstract class CrudAppService<TEntity, TKey, TDto> : ICrudAppService<TKey
             entities = await _repository.GetListAsync(
                 GetFilterExpression(input.Search), skipCount, input.PerPage,
                 GetSortingFilter(input.SortBy),
-                input.SortDirection == "desc", cancellationToken);
+                input.SortDirection == "desc",
+                GetIncludeList(),
+                cancellationToken);
         }
         else
         {
-            entities = await _repository.GetListAsync(skipCount, input.PerPage, GetSortingFilter(input.SortBy),input.SortDirection == "desc", cancellationToken);
+            entities = await _repository.GetListAsync(skipCount,
+                input.PerPage,
+                GetSortingFilter(input.SortBy),
+                input.SortDirection == "desc",
+                GetIncludeList(),
+                cancellationToken);
         }
         
         var totalCount = await _repository.CountAsync(x => x.Id != Guid.Empty, cancellationToken);
@@ -83,6 +90,10 @@ public abstract class CrudAppService<TEntity, TKey, TDto> : ICrudAppService<TKey
     {
         return x => x.CreatedOn;
     }
+    protected virtual List<string>? GetIncludeList()
+    {
+        return null;
+    }
 }
 
 public abstract class CrudAppService<TEntity, TKey, TDto, TCreateDto,
@@ -107,11 +118,16 @@ public abstract class CrudAppService<TEntity, TKey, TDto, TCreateDto,
             entities = await _repository.GetListAsync(
                 GetFilterExpression(input.Search), skipCount, input.PerPage,
                 GetSortingFilter(input.SortBy),
-                input.SortDirection == "desc", cancellationToken);
+                input.SortDirection == "desc", GetIncludeList(), cancellationToken);
         }
         else
         {
-            entities = await _repository.GetListAsync(skipCount, input.PerPage, GetSortingFilter(input.SortBy),input.SortDirection == "desc", cancellationToken);
+            entities = await _repository.GetListAsync(skipCount,
+                input.PerPage,
+                GetSortingFilter(input.SortBy),
+                input.SortDirection == "desc",
+                GetIncludeList(),
+                cancellationToken);
         }
         
         var totalCount = await _repository.CountAsync(x => x.Id != Guid.Empty, cancellationToken);
@@ -160,5 +176,8 @@ public abstract class CrudAppService<TEntity, TKey, TDto, TCreateDto,
     {
         return x => x.CreatedOn;
     }
-
+    protected virtual List<string>? GetIncludeList()
+    {
+        return null;
+    }
 }

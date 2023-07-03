@@ -7,6 +7,8 @@ using ConnectionPoint.Inventory.Application.Services.Contracts;
 using ConnectionPoint.Inventory.Domain.Entities;
 using ConnectionPoint.Taxing.Application.DTOs.Taxable;
 using ConnectionPoint.Taxing.Application.Services.Contracts;
+using ConnectionPoint.Voucher.Application.Dtos.Discountable;
+using ConnectionPoint.Voucher.Application.Services.Contracts;
 using Microsoft.EntityFrameworkCore;
 
 namespace ConnectionPoint.Inventory.Application.Services;
@@ -16,21 +18,29 @@ public class DealAppService : CrudAppService<Deal, Guid, DealDto, CreateDealDto,
     private readonly ITaxableAppService _taxableAppService;
     private readonly IRepository<Service> _servicesRepository;
     private readonly IRepository<Product> _productRepository;
+    private readonly IDiscountableAppService _discountableService;
 
-
-    public DealAppService(IRepository<Deal> repository, IMapper mapper, ITaxableAppService taxableAppService, IRepository<Service> servicesRepository, IRepository<Product> productRepository) : base(repository, mapper)
+    public DealAppService(IRepository<Deal> repository, IMapper mapper, ITaxableAppService taxableAppService, IRepository<Service> servicesRepository, IRepository<Product> productRepository, IDiscountableAppService discountableService) : base(repository, mapper)
     {
         _taxableAppService = taxableAppService;
         _servicesRepository = servicesRepository;
         _productRepository = productRepository;
+        _discountableService = discountableService;
     }
 
     public override async Task<DealDto?> CreateAsync(CreateDealDto input, CancellationToken cancellationToken = default)
     {
         var deal = _mapper.Map<Deal>(input);
+        deal.Id = Guid.NewGuid();
         await updateDealRelations(input.ProductsIds, input.ServicesIds, input.DealsIds, cancellationToken, deal);
         //TODO: Calculate discount price
-        await _repository.CreateAsync(deal, cancellationToken);
+        await _discountableService.CreateAsync(new CreateDiscountableDto
+        {
+            DiscountableId = deal.Id,
+            DiscountableType = nameof(Deal),
+            NetPrice = deal.NetPrice,
+            CouponIds = new List<Guid>()
+        });
         // Create taxable
         if (input.TaxesIds.Count > 0)
             await _taxableAppService.CreateAsync(new CreateTaxableDto
@@ -41,7 +51,7 @@ public class DealAppService : CrudAppService<Deal, Guid, DealDto, CreateDealDto,
                 NetPrice = deal.NetPrice,
                 TaxesIds = input.TaxesIds
             }, cancellationToken);
-
+        await _repository.CreateAsync(deal, cancellationToken);
         return _mapper.Map<DealDto>(deal);
     }
 

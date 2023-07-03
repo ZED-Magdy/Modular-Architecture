@@ -47,22 +47,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="Add ProductAttribute crud">
-      <change afterPath="$PROJECT_DIR$/src/ConnectionPoint.Gateway/Controllers/ProductAttributeValuesController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttributeValue/CreateProductAttributeValueDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttributeValue/ProductAttributeValueDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttributeValue/UpdateProductAttributeValueDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/Contracts/IProductAttributeValueAppService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ProductAttributeValueAppService.cs" afterDir="false" />
+    <list default="true" id="0ac10fbd-894e-4bbb-9d62-5f5235709480" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/shelf/Uncommitted_changes_before_Checkout_at________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/shelf/Uncommitted_changes_before_Checkout_at________Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConnectionPoint/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Application/Services/CrudAppService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Application/Services/CrudAppService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Domain/Repositories/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Domain/Repositories/IRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Infrastructure/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttribute/ProductAttributeDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttribute/ProductAttributeDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/InventoryApplicationModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/InventoryApplicationModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Infrastructure/Persistence/EFCoreRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/ConnectionPoint.Core.Infrastructure/Persistence/EFCoreRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/ConnectionPoint.Inventory.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/ConnectionPoint.Inventory.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Deal/CreateDealDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Deal/CreateDealDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Product/CreateProductDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Product/CreateProductDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Product/ProductDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Product/ProductDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Product/UpdateProductDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/Product/UpdateProductDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttributeValue/CreateProductAttributeValueDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttributeValue/CreateProductAttributeValueDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttributeValue/ProductAttributeValueDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttributeValue/ProductAttributeValueDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttributeValue/UpdateProductAttributeValueDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Dtos/ProductAttributeValue/UpdateProductAttributeValueDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/MapperConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/MapperConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ProductAttributeAppService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ProductAttributeAppService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/UnitAppService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/UnitAppService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/DealAppService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/DealAppService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ProductAppService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ProductAppService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/Product.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/ProductAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/ProductAttribute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Persistence/EFCore/InventoryDBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Persistence/EFCore/InventoryDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/ProductAttributeValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/ProductAttributeValue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/ProductVariation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/ProductVariation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Domain/Entities/Variation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/ConnectionPoint.Inventory.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/ConnectionPoint.Inventory.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/InventoryInfrastructureModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/InventoryInfrastructureModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/20230609170623_Init.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/20230609170623_Init.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/20230617222150_FixMigrations.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/20230610235853_FixTaxIds.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/20230610235853_FixTaxIds.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/20230612041612_AddProductVariations.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/20230617222150_FixMigrations.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/20230612041612_AddProductVariations.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/InventoryDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Migrations/InventoryDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Persistence/EFCore/IInventoryDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Persistence/EFCore/IInventoryDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Persistence/EFCore/InventoryDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Infrastructure/Persistence/EFCore/InventoryDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/Dtos/Discountable/CreateDiscountableDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/Dtos/Discountable/CreateDiscountableDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/Dtos/Discountable/DiscountableDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/Dtos/Discountable/DiscountableDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/Services/Contracts/IDiscountableAppService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/Services/Contracts/IDiscountableAppService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,24 +94,16 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="add-voucher-module" />
+        <entry key="$PROJECT_DIR$" value="d60048d89769999fd3d57ef1740f775b68f4e031" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
-  <component name="GithubProjectSettings">
-    <option name="branchProtectionPatterns">
-      <list>
-        <option value="main" />
-        <option value="staging" />
-      </list>
-    </option>
-  </component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -99,26 +113,23 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d382df578ec93391918cfaa4ce7f4b8f35c9aed1241d6556dc9be26df13c/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e74356f198b598e97eaeea83e8b7b1f2bfe27c0a39fedf86bb7dc44827fbda/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fecab28d64cfa2425c8a7329b1158ab5e0d087ed15ae9302e9c3a9e165c350/Queryable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4dc731a2825b3b282c3a7fc5adbea47e8720eadf5445558010f8488ec05eb64f/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ServiceAppService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8512b3f592a227cfb48f8fff0c16a356dcbfbb5399342d8febc7b7116bff64/IdentityRoleClaim.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce719136c12653cd464ae0b247771f618b92f8beec14c1010b5278a7d0fd1f/DbContextServices.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fa6ffbdad146e0f31ac2292ddf3ab30fa4c35b55932c2fc73ee6209dc7e5/NpgsqlMoneyTypeMapping.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cd8acfd6340199d4186f76c46704be72adc5846271f6a7a3989216e18d82e/IdentityServerApplicationBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3819a9b6d7712d903bcdec7ed2ae6a7eeb809ec174c15bbf3720d839fb35ce9d/IdentityUserClaim.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/56f822634992d269d967d6ff62ba539be8e6a3e41663bba2454d4a2b1139e3/ModelSource.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3e7a5d9e8f1e8fc8895e3999e4b986ebd69c6f311e8a7f7ba94f4560a54a89/IdentityDbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/0abadc5cd268454ea6f30a116caa00ed138b0/e1/5fc8447c/0200000Cpdb8.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/0cc712b3c51188485dd52dac67e1d13a879a12ad92b1ea0f28e9cc4a03393a/ControllerEndpointRouteBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3abfeefdfe67e021478218bc6c6be866b341c4d7a9d350af6584eace2a1d3b1/IAuthenticationService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/424460a2b714e3c49248e13a38b95f15f3a145529480f4bccf9a5797b33f2731/AuthorizationAppBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f1d695467c3e3871d73db4d75cdfe67a6f51b4d3211a2561ad314c25c7f39a/AuthorizationMiddlewareResultHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70df3e5caa697356d2da36622f77875efdb4473eafb5bfb84fe07e71a22b9499/EntityFrameworkServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/aacc74311ca994f12b71cddb22241be9d6654c65e94f5985c5488dee396916f/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c263c8fb9cfe96923e1b47bd1ec8258f85c4219772d976133ab516ceb1859ec/ModelCustomizer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ada1aee725b20939caf10b4fe5a68146c7defadce5f267644624c7aeb8630c6/CoreStrings.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c02f16abc742a9c84eb090253198f55fb02cb753656226c5419277cecce06d/IAuthenticationHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c73c57dfa6715bdaf218c51290970859cda0c2e181a737f4166eeb36f6a1ab/AuthenticationHttpContextExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ca2ffd3871ba9e260db8cb634617d8ed198f7ab1e926e52c14a8ff22a64682a/AuthenticationService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e74356f198b598e97eaeea83e8b7b1f2bfe27c0a39fedf86bb7dc44827fbda/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f49cff66f832b071eb86cb06a49de7c4ede1180797241c21e54be5fb53e74c/PolicyAuthorizationResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f53d6750e266ad187862da9ad953a842f3babcefbbcfe572a622b208bab8ba/IAuthorizationMiddlewareResultHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/facad4292c1d7da96e4eecf681ad9b0d65de4612afef21d8a14c526a937210/AuthorizationMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ServiceAppService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Voucher/ConnectionPoint.Voucher.Application/MapperConfig.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4393b886a286b7656c92b4aee5d9759858ee3ca3f858a1b518be26bea0c7/String.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b005387896e445e9934cc0d7c4c3e87f30880/0/KeyAttribute.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c2c76f76c4c99a8c6db55b1934da998bcd24e7561ec068c48c92e497271b8/ICurrentDbContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/816dbaba8a29ece3dd3dc326642858d27d2d19142f9a2109bb04617985ec9/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8aeca8dfcec95a81b42a28e5c138e1c321e89def3fed605511172a8beaec/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -819,6 +830,11 @@
       <workItem from="1686771726783" duration="5013000" />
       <workItem from="1686842004502" duration="1249000" />
       <workItem from="1686894825444" duration="5341000" />
+      <workItem from="1687044392711" duration="8164000" />
+      <workItem from="1687065170351" duration="1196000" />
+      <workItem from="1687123890950" duration="1208000" />
+      <workItem from="1687292503646" duration="2032000" />
+      <workItem from="1687933597026" duration="811000" />
     </task>
     <task id="LOCAL؜٠٠٠٠١" summary="Create Inventory domain">
       <created>1684545942931</created>
@@ -1017,5 +1033,24 @@
     <MESSAGE value="Add Units Crud" />
     <MESSAGE value="Add ProductAttribute crud" />
     <option name="LAST_COMMIT_MESSAGE" value="Add ProductAttribute crud" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Inventory/ConnectionPoint.Inventory.Application/Services/ProductAppService.cs</url>
+          <line>92</line>
+          <properties documentPath="D:\Github\ConnectionPoint\ConnectionPoint\src\Inventory\ConnectionPoint.Inventory.Application\Services\ProductAppService.cs" initialLine="92" containingFunctionPresentation="Method 'CreateVariationsFor'">
+            <startOffsets>
+              <option value="4312" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4313" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,5 +1,6 @@
 ﻿using ConnectionPoint.Core.Infrastructure;
 using ConnectionPoint.Inventory.Domain;
+using ConnectionPoint.Inventory.Domain.Entities;
 using ConnectionPoint.Inventory.Infrastructure.Persistence.EFCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,9 +15,9 @@ public static class InventoryInfrastructureModule
         services
             .AddModuleDatabaseContext<InventoryDbContext>(configuration)
             .AddScoped<IInventoryDbContext>(provider => provider.GetService<InventoryDbContext>()!);
-        // services.AddScoped<IRepository<Category>, InventoryRepository<Category>>();
-        services.RegisterRepositories(typeof(InventoryRepository<>), typeof(InventoryDomainModule).Assembly);
-
+            // services.AddScoped<IRepository<Category>, InventoryRepository<Category>>();
+            services.RegisterRepositories(typeof(InventoryRepository<>), typeof(InventoryDomainModule).Assembly);
+            
         return services;
     }
 }
