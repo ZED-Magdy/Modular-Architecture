@@ -9,6 +9,7 @@
     <ItemGroup>
       <ProjectReference Include="..\..\Core\ConnectionPoint.Core.Application\ConnectionPoint.Core.Application.csproj" />
       <ProjectReference Include="..\..\Core\ConnectionPoint.Core.Domain\ConnectionPoint.Core.Domain.csproj" />
+      <ProjectReference Include="..\..\Taxing\ConnectionPoint.Taxing.Application\ConnectionPoint.Taxing.Application.csproj" />
       <ProjectReference Include="..\ConnectionPoint.Inventory.Domain\ConnectionPoint.Inventory.Domain.csproj" />
       <ProjectReference Include="..\ConnectionPoint.Inventory.Infrastructure\ConnectionPoint.Inventory.Infrastructure.csproj" />
     </ItemGroup>
@@ -16,6 +17,21 @@
     <ItemGroup>
       <PackageReference Include="AutoMapper" Version="12.0.1" />
       <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Localization\inventory.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>inventory.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Localization\inventory.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>inventory.resx</DependentUpon>
+      </Compile>
     </ItemGroup>
 
 </Project>

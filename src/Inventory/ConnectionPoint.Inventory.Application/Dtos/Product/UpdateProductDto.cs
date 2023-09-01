@@ -13,7 +13,7 @@ public class UpdateProductDto
     /// (GrossPrice - Discount) - Taxes
     /// </summary>
     public decimal NetPrice { get; set; }
-    //public IList<Guid> TaxesIds { get; set; } = new List<Guid>();
+    public IList<Guid> TaxesIds { get; set; } = new List<Guid>();
     public decimal? Discount { get; set; }
     public decimal? DiscountPrice { get; set; }
     /// <summary>
@@ -26,7 +26,6 @@ public class UpdateProductDto
     ///  0 = Single, 1 = Variant
     /// </summary>
     public ProductTypeDto ProductType { get; set; } = ProductTypeDto.Single;
-    // public Guid? ParentProduct { get; set; }
-    // public IList<ProductDto> Variants { get; set; } = new List<ProductDto>();
-    // public IList<CategoryDto> Categories { get; set; } = new List<CategoryDto>();
+    public IList<Guid> CategoriesIds { get; set; } = new List<Guid>();
+    public bool Active { get; set; } = true;
 }

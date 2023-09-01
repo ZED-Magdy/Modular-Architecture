@@ -1,4 +1,5 @@
-﻿using ConnectionPoint.Core.Domain.Entities;
+﻿using System.Linq.Expressions;
+using ConnectionPoint.Core.Domain.Entities;
 using ConnectionPoint.Core.Domain.Repositories;
 using ConnectionPoint.Core.Application.Dtos;
 

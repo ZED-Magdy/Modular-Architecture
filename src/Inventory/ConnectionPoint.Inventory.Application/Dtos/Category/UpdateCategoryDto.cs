@@ -7,4 +7,5 @@ public class UpdateCategoryDto
     public string? DescriptionAr { get; set; }
     public string? DescriptionEn { get; set; }
     public Guid? ParentCategoryId { get; set; } = null;
+    public bool Active { get; set; }
 }

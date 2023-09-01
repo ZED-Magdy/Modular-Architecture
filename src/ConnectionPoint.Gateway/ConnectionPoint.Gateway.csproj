@@ -25,6 +25,8 @@
     <ItemGroup>
       <ProjectReference Include="..\Core\ConnectionPoint.Core.Application\ConnectionPoint.Core.Application.csproj" />
       <ProjectReference Include="..\Inventory\ConnectionPoint.Inventory.Application\ConnectionPoint.Inventory.Application.csproj" />
+        <ProjectReference Include="..\Voucher\ConnectionPoint.Voucher.Application\ConnectionPoint.Voucher.Application.csproj" />
+      <ProjectReference Include="..\Taxing\ConnectionPoint.Taxing.Application\ConnectionPoint.Taxing.Application.csproj" />
     </ItemGroup>
 
 </Project>
